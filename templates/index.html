@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISTV — B-Roll Generation Tool</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Inside Success TV" class="logo">
+            <h1 class="tool-title">B-Roll Generation Tool</h1>
+        </header>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        <div class="flash-messages">
+            {% for category, message in messages %}
+            <div class="flash flash-{{ category }}">{{ message }}</div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% endwith %}
+
+        <div class="card mode-selector-card">
+            <h2 class="card-title">Chained Generation Pipeline</h2>
+            <div class="pipeline-steps">
+                <div class="pipeline-step">
+                    <span class="step-num">1</span>
+                    <span class="step-label">Cut Sheet → Client Brief + B-Roll Images</span>
+                </div>
+                <svg class="pipeline-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+                <div class="pipeline-step" style="opacity: 0.5;">
+                    <span class="step-num">2</span>
+                    <span class="step-label">Editor Decision Sheet (optional, after review)</span>
+                </div>
+            </div>
+            <div style="margin-top:16px;text-align:center;">
+                <a href="{{ url_for('batch_generate') }}" style="color:#8a7234;font-size:14px;text-decoration:none;font-weight:600;">
+                    ⚡ Batch Mode — process multiple cut sheets from input/ folder
+                </a>
+            </div>
+        </div>
+
+        <form action="{{ url_for('generate') }}" method="POST" enctype="multipart/form-data" id="generateForm">
+
+            <div class="card">
+                <h2 class="card-title">Upload Cut Sheet</h2>
+                <p class="card-subtitle">Upload a cut sheet (XLSX, PDF, TXT) or raw audio/video file (.mp3, .wav, .m4a, .mp4). Audio files are auto-transcribed via Rev.ai before brief generation.</p>
+                <div class="upload-area" id="uploadArea">
+                    <input type="file" id="cut_sheet" name="cut_sheet" accept=".xlsx,.xls,.pdf,.txt,.mp3,.wav,.m4a,.ogg,.flac,.mp4,.webm" required>
+                    <div class="upload-content">
+                        <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M17 8l-5-5-5 5M12 3v12"/>
+                        </svg>
+                        <p class="upload-text">Drop your file here or <span class="upload-link">browse</span></p>
+                        <p class="upload-hint">Accepts .xlsx, .pdf, .txt, .mp3, .wav, .m4a, .mp4</p>
+                    </div>
+                    <div class="file-selected" id="fileSelected" style="display:none;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <span id="fileName"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2 class="card-title">Client Information <span class="optional">(optional overrides — Prompt 1)</span></h2>
+                <p class="card-subtitle">Fill these in only if the cut sheet doesn't already contain them, or if you want to override what's in the file.</p>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="client_first_name">Client First Name</label>
+                        <input type="text" id="client_first_name" name="client_first_name" placeholder="e.g. Marcus">
+                    </div>
+                    <div class="form-group">
+                        <label for="client_full_name">Client Full Name</label>
+                        <input type="text" id="client_full_name" name="client_full_name" placeholder="e.g. Marcus Williams">
+                    </div>
+                    <div class="form-group">
+                        <label for="episode_title">Episode Title</label>
+                        <input type="text" id="episode_title" name="episode_title" placeholder="e.g. From the Ground Up">
+                    </div>
+                    <div class="form-group">
+                        <label for="industry">Industry / Niche</label>
+                        <input type="text" id="industry" name="industry" placeholder="e.g. Real Estate Development">
+                    </div>
+                    <div class="form-group">
+                        <label for="deadline">Submission Deadline</label>
+                        <input type="text" id="deadline" name="deadline" placeholder="e.g. May 15, 2026 — or leave blank for TBD">
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="editor_notes">Editor Notes</label>
+                        <textarea id="editor_notes" name="editor_notes" rows="3" placeholder="Any extra context from the editor — key themes, emotional beats, moments to emphasise..."></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2 class="card-title">Editor Info <span class="optional">(optional overrides — Prompt 2)</span></h2>
+                <p class="card-subtitle">These populate the header of the Editor Decision Sheet. Left blank = extracted automatically.</p>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="subject_name">Subject Full Name</label>
+                        <input type="text" id="subject_name" name="subject_name" placeholder="e.g. Aida Serge (defaults to client name)">
+                    </div>
+                    <div class="form-group">
+                        <label for="show_name">Show Name</label>
+                        <input type="text" id="show_name" name="show_name" placeholder="e.g. Next Level CEO">
+                    </div>
+                    <div class="form-group">
+                        <label for="total_runtime">Total Runtime</label>
+                        <input type="text" id="total_runtime" name="total_runtime" placeholder="e.g. 23 min">
+                    </div>
+                    <div class="form-group">
+                        <label for="editor_name">Editor Name</label>
+                        <input type="text" id="editor_name" name="editor_name" placeholder="e.g. James — or leave blank for TBD">
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="btn-generate" id="submitBtn">
+                <span class="btn-text" id="btnText">Generate Client Brief</span>
+                <span class="btn-loading" style="display:none;">
+                    <span class="spinner"></span>
+                    <span id="loadingText">Generating client brief &amp; B-roll images (may take up to 5 minutes for audio files)...</span>
+                </span>
+            </button>
+        </form>
+
+        <div class="workflow-hint" id="workflowHint">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 16v-4M12 8h.01"/>
+            </svg>
+            <span>Cut sheet generates the Client Brief + B-roll reference images. You can then optionally generate the Editor Decision Sheet from the result page.</span>
+        </div>
+    </div>
+
+    <script>
+        const fileInput = document.getElementById('cut_sheet');
+        const uploadArea = document.getElementById('uploadArea');
+        const fileSelected = document.getElementById('fileSelected');
+        const fileName = document.getElementById('fileName');
+        const uploadContent = uploadArea.querySelector('.upload-content');
+
+        fileInput.addEventListener('change', function() {
+            if (this.files.length > 0) {
+                fileName.textContent = this.files[0].name;
+                fileSelected.style.display = 'flex';
+                uploadContent.style.display = 'none';
+            } else {
+                fileSelected.style.display = 'none';
+                uploadContent.style.display = 'flex';
+            }
+        });
+
+        ['dragenter', 'dragover'].forEach(evt => {
+            uploadArea.addEventListener(evt, e => {
+                e.preventDefault();
+                uploadArea.classList.add('drag-over');
+            });
+        });
+        ['dragleave', 'drop'].forEach(evt => {
+            uploadArea.addEventListener(evt, e => {
+                e.preventDefault();
+                uploadArea.classList.remove('drag-over');
+            });
+        });
+        uploadArea.addEventListener('drop', e => {
+            fileInput.files = e.dataTransfer.files;
+            fileInput.dispatchEvent(new Event('change'));
+        });
+
+        const form = document.getElementById('generateForm');
+        const submitBtn = document.getElementById('submitBtn');
+        form.addEventListener('submit', function() {
+            submitBtn.querySelector('.btn-text').style.display = 'none';
+            submitBtn.querySelector('.btn-loading').style.display = 'inline-flex';
+            submitBtn.disabled = true;
+        });
+    </script>
+</body>
+</html>

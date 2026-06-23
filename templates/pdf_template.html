@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 2cm 2.5cm;
+            @frame footer {
+                -pdf-frame-content: footerContent;
+                bottom: 0;
+                margin-left: 2.5cm;
+                margin-right: 2.5cm;
+                height: 1.5cm;
+            }
+        }
+
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 10pt;
+            line-height: 1.6;
+            color: #1a1a1a;
+        }
+
+        .pdf-header {
+            text-align: center;
+            padding-bottom: 12px;
+            margin-bottom: 18px;
+        }
+
+        .pdf-header img {
+            width: 180px;
+            margin-bottom: 8px;
+        }
+
+        .pdf-header h1 {
+            font-size: 15pt;
+            color: {% if brief_type == 'editor' %}#2c5aa0{% else %}#c8a84e{% endif %};
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin: 0 0 4px 0;
+        }
+
+        .pdf-header .subtitle {
+            font-size: 11pt;
+            color: #555;
+            margin: 0;
+        }
+
+        .pdf-header .date {
+            font-size: 9pt;
+            color: #888;
+            margin: 6px 0 0 0;
+        }
+
+        .internal-badge {
+            text-align: center;
+            font-size: 8pt;
+            font-weight: bold;
+            color: #c0392b;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin: 6px 0 0 0;
+            padding: 4px 12px;
+        }
+
+        .brief-content h1 {
+            font-size: 14pt;
+            color: {% if brief_type == 'editor' %}#2c5aa0{% else %}#c8a84e{% endif %};
+            margin-top: 20px;
+            margin-bottom: 8px;
+            padding-bottom: 4px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .brief-content h2 {
+            font-size: 12pt;
+            color: #333;
+            margin-top: 16px;
+            margin-bottom: 6px;
+        }
+
+        .brief-content h2.major-section-start {
+            page-break-before: always;
+            margin-top: 24px;
+            padding-top: 8px;
+        }
+
+        .brief-content h3 {
+            font-size: 11pt;
+            color: #555;
+            margin-top: 12px;
+            margin-bottom: 5px;
+        }
+
+        .brief-content p {
+            margin-bottom: 6px;
+            color: #333;
+        }
+
+        .brief-content ul, .brief-content ol {
+            margin-left: 18px;
+            margin-bottom: 8px;
+        }
+
+        .brief-content li {
+            margin-bottom: 3px;
+        }
+
+        .brief-content strong {
+            color: #1a1a1a;
+        }
+
+        .brief-content em {
+            color: #555;
+        }
+
+        .brief-content code {
+            font-family: Courier, monospace;
+            font-size: 9pt;
+            color: #8a7234;
+        }
+
+        .brief-content pre {
+            background: #f5f5f0;
+            border: 1px solid #ddd;
+            padding: 10px 14px;
+            margin: 8px 0;
+            font-size: 8pt;
+            line-height: 1.5;
+            font-family: Courier, monospace;
+        }
+
+        .brief-content hr {
+            border: none;
+            border-top: 1px solid #ddd;
+            margin: 14px 0;
+        }
+
+        .broll-reference-still {
+            text-align: center;
+            margin: 14px auto 18px;
+            padding: 10px 12px;
+            border: 1px solid #d4c9a8;
+            background: #faf8f3;
+            page-break-inside: avoid;
+        }
+
+        .broll-reference-label {
+            font-size: 8pt;
+            font-weight: bold;
+            color: #8a7234;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            margin: 0 0 6px 0;
+        }
+
+        .broll-reference-still img {
+            width: 600px;
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .broll-reference-caption {
+            font-size: 7.5pt;
+            color: #777;
+            font-style: italic;
+            margin: 6px 0 0 0;
+        }
+
+        .brief-content .transcript-label {
+            color: #8a7234;
+        }
+
+        .brief-content .transcript-context {
+            font-style: italic;
+            color: #444;
+        }
+
+        .tldr-box {
+            border: 1.5px solid #c8a84e;
+            background: #fdfbf5;
+            padding: 14px 18px;
+            margin-bottom: 18px;
+            border-radius: 6px;
+        }
+
+        .tldr-box h2 {
+            font-size: 12pt;
+            color: #8a7234;
+            margin: 0 0 8px;
+            border: none;
+            padding: 0;
+        }
+
+        .tldr-box p {
+            margin-bottom: 4px;
+            font-size: 9.5pt;
+        }
+
+        details.brief-section {
+            margin-bottom: 6px;
+        }
+
+        details.brief-section summary {
+            display: none;
+        }
+
+        .brief-section-body {
+            display: block;
+        }
+
+        .brief-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 8px 0;
+        }
+
+        .brief-content th, .brief-content td {
+            border: 1px solid #ddd;
+            padding: 5px 8px;
+            text-align: left;
+            font-size: 9pt;
+        }
+
+        .brief-content th {
+            background: #f5f5f0;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .footer-content {
+            text-align: center;
+            font-size: 8pt;
+            color: #888;
+            border-top: 1px solid #ddd;
+            padding-top: 6px;
+        }
+
+        .footer-brand {
+            color: {% if brief_type == 'editor' %}#2c5aa0{% else %}#c8a84e{% endif %};
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="pdf-header">
+        {% if logo_b64 and brief_type == 'editor' %}
+        <img src="data:image/png;base64,{{ logo_b64 }}" alt="Inside Success TV">
+        {% endif %}
+        {% if brief_type == 'editor' %}
+        <h1>EDITOR B-ROLL DECISION SHEET</h1>
+        <div class="internal-badge">Internal Use Only &mdash; Not For Client Distribution</div>
+        {% else %}
+        <h1>POST-EDIT B-ROLL &amp; PRODUCTION BRIEF</h1>
+        {% endif %}
+        <p class="subtitle">{{ client_full_name }} &mdash; {{ episode_title }}</p>
+        <p class="date">Generated {{ generation_date }}</p>
+    </div>
+
+    <div class="brief-content">
+        {{ brief_html | safe }}
+    </div>
+
+    <div id="footerContent">
+        <div class="footer-content">
+            <span class="footer-brand">Inside Success TV</span> &bull;
+            {% if brief_type == 'editor' %}
+            Internal Production Document &bull;
+            {% endif %}
+            support@insidesuccesstv.com &bull; {{ generation_date }}
+        </div>
+    </div>
+</body>
+</html>

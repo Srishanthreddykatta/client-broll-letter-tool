@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 52" role="img" aria-label="Inside Success">
+  <text x="0" y="22" font-family="Arial Black, Arial, sans-serif" font-size="18" font-weight="900" fill="#000">INS</text>
+  <g transform="translate(46,2)">
+    <rect x="0" y="0" width="10" height="20" fill="#000"/>
+    <rect x="1.5" y="2" width="7" height="3.5" fill="#fff"/>
+    <rect x="1.5" y="8.25" width="7" height="3.5" fill="#fff"/>
+    <rect x="1.5" y="14.5" width="7" height="3.5" fill="#fff"/>
+    <circle cx="1" cy="4" r="0.7" fill="#fff"/>
+    <circle cx="9" cy="4" r="0.7" fill="#fff"/>
+    <circle cx="1" cy="10.25" r="0.7" fill="#fff"/>
+    <circle cx="9" cy="10.25" r="0.7" fill="#fff"/>
+    <circle cx="1" cy="16.5" r="0.7" fill="#fff"/>
+    <circle cx="9" cy="16.5" r="0.7" fill="#fff"/>
+  </g>
+  <text x="58" y="22" font-family="Arial Black, Arial, sans-serif" font-size="18" font-weight="900" fill="#000">DE</text>
+  <text x="0" y="48" font-family="Arial Black, Arial, sans-serif" font-size="18" font-weight="900" fill="#000">SUCCESS</text>
+</svg>

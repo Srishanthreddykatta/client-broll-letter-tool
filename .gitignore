@@ -1,0 +1,50 @@
+# Environment and secrets
+.env
+.env.local
+*.pem
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+dist/
+build/
+.venv/
+venv/
+env/
+
+# Test and tool caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# App runtime data
+.briefs/
+generated/
+generated_images/
+output/
+input/
+
+# Generated exports and local artifacts
+*.docx
+!reference/**/*.docx
+ref_docx_analysis.txt
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Cursor / agent artifacts
+agent-transcripts/
+
+# Large or transient media (regenerate locally)
+static/logo.png

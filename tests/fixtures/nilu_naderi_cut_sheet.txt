@@ -1,0 +1,958 @@
+```json
+{
+  "sheets": [
+    {
+      "id": "cut_sheet",
+      "excel_name": "Cut Sheet",
+      "banner_title": "NILU NADERI — The Seed That Waited",
+      "banner_subtitle": "Runtime target: Documentary Content: 23 min | Credits: 2 min | Total: 25 min",
+      "headers": ["#", "SECTION", "TYPE", "START", "END", "CONTENT", "TONE", "EST. SEC", "CUMULATIVE", "EDITOR NOTES"],
+      "rows": [
+        {
+          "kind": "section_header",
+          "cells": ["1", "HOOK", "", "", "", "Nilu declares that Wonder is not hers but an assignment she's stewarding, then introduces herself as its creator and host.", "", "", "~0.7 min", ""]
+        },
+        {
+          "kind": "ip",
+          "cells": ["1.1", "HOOK", "IP", "00:08:34", "00:08:43", "\"Well, what inspires me about Wonder is Wonder is an assignment. Um, it's not mine. Uh, I'm just stewarding it. So that makes me show up very differently.\"", "quietly convicted — mid", "6", "", ""]
+        },
+        {
+          "kind": "ip",
+          "cells": ["1.2", "HOOK", "IP", "00:08:23", "00:08:26", "\"I'm Ni l Nader. I'm the creator and host of Wonder.\"", "confident — low", "3", "", "Subject's name is spelled inconsistently across the transcript (\"Ni l Nader,\" \"Nilu Nari,\" \"Neely Nari,\" \"Neil Luna,\" \"Neela Nader,\" \"Neland,\" \"Neilly Nader,\" \"Neil Ledi,\" etc.). Verify correct spelling against on-screen graphics or subject's own writing. Using \"Nilu Naderi\" as the standardized spelling based on phonetic context and the most complete rendering across takes."]
+        },
+        {
+          "kind": "runtime",
+          "cells": ["", "HOOK", "", "", "", "", "", "", "SECTION RUNTIME: ~0.7 min | CUMULATIVE: ~0.7 min", ""]
+        },
+        {
+          "kind": "section_header",
+          "cells": ["2", "THROUGH THE DESERT", "", "", "", "Born into a persecuted Baha'i family in post-revolution Iran, six-year-old Nilu fled through the desert to Pakistan, carrying memories of her uncle's torture and execution, before arriving in California where she learned to survive by fitting in.", "", "", "~4.5 min", ""]
+        },
+        {
+          "kind": "vo",
+          "cells": ["2.1", "THROUGH THE DESERT", "VO", "", "", "Nilu Naderi was born in Iran in 1982, two years after the Islamic Revolution — into a family the new regime considered enemies.", "", "5", "", ""]
+        },
+        {
+          "kind": "ip",
+          "cells": ["2.2", "THROUGH THE DESERT", "IP", "00:13:44", "00:14:03", "\"Uh, so my childhood is unconventional. I would say. I was born in Iran 1982, a couple years after the revolution. Uh, born into a non-Muslim family, uh, post-revolution that was very problematic for us. Uh, we had religious persecution, um, and my mom just felt very strongly that she wanted us to have a better life.\"", "matter-of-fact — low", "12", "", "Trim available — clip can start at \"I was born in Iran 1982\" if tighter pacing needed."]
+        },
+        {
+          "kind": "vo",
+          "cells": ["2.3", "THROUGH THE DESERT", "VO", "", "", "Nilu's family is Baha'i — a faith that emerged after Islam and is considered blasphemy by the ruling regime. Her mother had converted from Islam, the worst possible offense.", "", "7", "", ""]
+        },
+        {
+          "kind": "ip",
+          "cells": ["2.4", "THROUGH THE DESERT", "IP", "00:25:07", "00:25:47", "\"I remember when we were escaping, uh, we were in the middle of the night, we were camped out at some desert place in, uh, in Iran, close to the Pakistan border. And, um, they told us, my, my parents were like, oh, you know, if we get caught and they ask you if you're Bahai, don't lie. Like, they had a lot of pride in, in who they were. And I remember thinking as like, a 6-year-old, are you crazy? Like, we can get killed. We can go to <laugh>, be put in jail. Like, I, I was like, I really hope we don't get, get into that situation.\"", "vivid disbelief — mid", "26", "", "Subject laughs at \"We can go to <laugh>, be put in jail\" — preserve the laugh, it reveals the absurdity a child felt in that moment."]
+        },
+        {
+          "kind": "ip",
+          "cells": ["2.5", "THROUGH THE DESERT", "IP", "00:27:30", "00:27:57", "\"And what they, the the plan was essentially to put us at the back of these trucks that were carrying cargo from Iran into Pakistan. And I don't know what kind of cargo they were carrying, but like, one of those trucks was gonna be us, the family. So it was gonna be, the way we sat in the, in the back of this truck was my dad, the four kids. So my older sister and me and my two brothers, and then my mom. And then they put like a big heavy tarp over us.\"", "somber — mid", "17", "", ""]
+        },
+        {
+          "kind": "ip",
+          "cells": ["2.6", "THROUGH THE DESERT", "IP", "00:27:58", "00:28:17", "\"And I remember my mom, my parents, like all of us were held holding hands, and she was just like saying these, um, prayers under her breath, um, like the Baha version of a Hail Mary, I guess you can say. And, um, to get us to get us across safely.\"", "tender — mid/high (verify against footage)", "12", "", ""]
+        },
+        {
+          "kind": "vo",
+          "cells": ["2.7", "THROUGH THE DESERT", "VO", "", "", "They made it to Pakistan, spent two years there, and eventually reached California. Nilu was seven years old.", "", "5", "", ""]
+        },
+        {
+          "kind": "ip",
+          "cells": ["2.8", "THROUGH THE DESERT", "IP", "00:16:22", "00:16:48", "\"it was, it was interesting because I, I got to the states when I was in third grade, and my sister got into the states when she was in sixth grade. And third graders are a lot nicer than sixth graders. So it was easier for me to assimilate. I, that was like something, as a child, I just kind of inherently understood maybe it was part of trauma was, uh, I need to fit in. Uh, because in Iran we stood out and it caused problems. Uh, so I wanted to fit in as much as possible.\"", "reflective — mid", "16", "", ""]
+        },
+        {
+          "kind": "ip",
+          "cells": ["2.9", "THROUGH THE DESERT", "IP", "00:29:27", "00:31:03", "\"another kind of distinct memory I have from Iran was, um, when I was five years old, my uncle, my dad's, one of my dad's brothers, he was a, um, very, uh, active, uh, voice in hi in his college campus. He was, uh, studying engineering and he would do like peaceful protests against the regime. And, you know, they go, they advised him not to do it because one, the regime was very strict, um, oppressive. And also he had a Baha background, so it was a, it was <laugh>, it was the perfect storm, but he ended up getting captured and, um, taken into jail.\"", "measured gravity — mid", "58", "", "Subject laughs darkly at \"it was the perfect storm\" — preserve this. It signals the grim irony she's processing."]
+        },
+        {
+          "kind": "ip",
+          "cells": ["2.10", "THROUGH THE DESERT", "IP", "00:30:24", "00:30:53", "\"And then he saw that they brought me, and I was only five years old, and he basically motioned to my dad to come forward. And he didn't want me to come closer 'cause he didn't want me to see the torture marks on him. They had like, um, cut off his knuckles. They had done stuff to him, uh, uh, an interrogation.\"", "grief-stricken — mid/high (verify against footage)", "18", "", ""]
+        },
+        {
+          "kind": "ip",
+          "cells": ["2.11", "THROUGH THE DESERT", "IP", "00:31:06", "00:31:20", "\"And that's what I mean when I say, um, assimilation felt safe for me because my uncle was protesting the regime. He was standing out and it ended up, uh, being his demise 'cause he was executed by the regime in 1988.\"", "steely — high", "9", "", ""]
+        },
+        {
+          "kind": "runtime",
+          "cells": ["", "THROUGH THE DESERT", "", "", "", "", "", "", "SECTION RUNTIME: ~4.5 min | CUMULATIVE: ~5.2 min", ""]
+        },
+        {
+          "kind": "section_header",
+          "cells": ["3", "THE MIXER", "", "", "", "A children's radio show at age 13 planted a seed for storytelling and media that went unwatered for over twenty years as Nilu pursued physics, public health, and management consulting across California, New York, and back.", "", "", "~6.0 min", ""]
+        },
+        {
+          "kind": "vo",
+          "cells": ["3.1", "THE MIXER", "VO", "", "", "In Anaheim, California, Nilu's parents plugged her into Iranian cultural programs run by an expat journalist named Homa Asan. At thirteen, Nilu was given her own children's radio show.", "", "7", "", ""]
+        },
+        {
+          "kind": "ip",
+          "cells": ["3.2", "THE MIXER", "IP", "00:20:07", "00:20:20", "\"And so for an entire year we co-hosted a children's radio show. My dad would pick us up after school, drive us to the stu to the radio host, radio station, RBCS Iranian. And then from there, uh, we were in charge of coming up with the program, coming up with the questions we put on like games, contests.\"", "warm nostalgia — mid", "8", "", ""]
+        },
+        {
+          "kind": "ip",
+          "cells": ["3.3", "THE MIXER", "IP", "00:20:37", "00:20:48", "\"Um, you know, sometimes we didn't have a lot of callers, so my friend's younger sister would go in the other room and call in as a guest <laugh>.\"", "playful — low", "7", "", "Subject laughs here — preserve the laugh."]
+        },
+        {
+          "kind": "ip",
+          "cells": ["3.4", "THE MIXER", "IP", "00:21:11", "00:21:53", "\"and I around behind the mixer, and I was just playing around and you can, you know, play music in the studio. And like, there's clearly a sign that says on air or not on air. And I was playing, I was playing a song with James Brown and Mariah Carey, and we were just having a blast. I mean, 12, 13-year-old girls. And apparently I went on air while this guy in Atlanta is talking about a plane crash that killed like 200 people. And all of a sudden here comes Nilu saying, James Brown, James Brown. And then you just hear something upstairs because homeA used to live upstairs, and she comes running down the stairs, you are on the air, you know, like, oh my God. It was, it was devastating, disastrous, uh, embarrassing. But I still didn't lose my job.\"", "comedic — mid", "25", "", "This is a natural story run with strong comedic timing. Do not break."]
+        },
+        {
+          "kind": "ip",
+          "cells": ["3.5", "THE MIXER", "IP", "00:22:38", "00:23:16", "\"Yeah, so that, honestly, I did a lot of like different things as a kid, but sitting behind the mixer as like a 13-year-old girl, I, I just felt something really, um, innate. I felt like I was at home, um, telling stories, interviewing guests. Like I brought my friend who was gonna play Dorothy in the Wizard of Oz in our, um, middle school, um, musical. And we interviewed her on the show. Uh, so that just felt very natural for me. And I, I really wish I just kept going with that inspiration.\"", "wistful — mid", "24", "", ""]
+        },
+        {
+          "kind": "ip",
+          "cells": ["3.6", "THE MIXER", "IP", "00:23:17", "00:23:45", "\"Uh, but I ended up, after, after the show, after one year of doing that show, uh, I still did the performance arts with Homa and her and the cast, but I never followed up media until, until I was like 35 years old. So, um, that seed was planted or it, um, blossomed early, and then it just wasn't watered for a long time.\"", "resigned — low", "17", "", ""]
+        },
+        {
+          "kind": "vo",
+          "cells": ["3.7", "THE MIXER", "VO", "", "", "Instead, Nilu studied physics at UC Irvine, dreaming of becoming an astronaut. She ended up in healthcare — first as an MRI researcher, then running school-based health clinics in the Bronx for pennies.", "", "8", "", ""]
+        },
+        {
+          "kind": "ip",
+          "cells": ["3.8", "THE MIXER", "IP", "00:38:40", "00:39:06", "\"It was very rewarding, but it was, uh, it paid pennies, <laugh>, and, uh, that was tough. Living in New York City, living in Manhattan, uh, the girl that I moved to New York with, my, one of my great friends, uh, she, uh, is very posh and she didn't wanna live, you know, in Queens. So we lived in soho and West Village and very, uh, affluent areas. Uh, so it was tough financially, but I really enjoyed it.\"", "wryly amused — low", "16", "", "Subject laughs at \"it paid pennies\" — preserve the laugh."]
+        },
+        {
+          "kind": "vo",
+          "cells": ["3.9", "THE MIXER", "VO", "", "", "She moved back to Los Angeles, transitioned into management consulting, and for the first time in her career started making real money.", "", "5", "", ""]
+        },
+        {
+          "kind": "ip",
+          "cells": ["3.10", "THE MIXER", "IP", "00:46:23", "00:46:50", "\"Uh, so I worked in management consulting, uh, from 2014 to 2019. And that was, uh, it was, uh, you know, they kind of like threw me into the ocean and said swim. Uh, but I, I loved it. I was good at it. Um, and like I said, it was a totally different side of healthcare. Uh, it was no heart. All the heart was in the grassroots stuff I was doing, but I was getting paid really well. Uh, so I was like, how do I balance these two things, you know?\"", "candid — mid", "17", "", ""]
+        },
+        {
+          "kind": "vo",
+          "cells": ["3.11", "THE MIXER", "VO", "", "", "In 2016, searching for that balance, Nilu and two friends created a guided meditation series called 2020 Meditate for Peace. The app Insight Timer featured it as the launch of their 365-day challenge.", "", "8", "", ""]
+        },
+        {
+          "kind": "ip",
+          "cells": ["3.12", "THE MIXER", "IP", "00:48:46", "00:49:00", "\"And they started their co their program with our course. So the first 20 days was our co course, and that led to our course getting millions of downloads, a lot of traction on Insight Timer, these Guided meditations.\"", "proud — low", "9", "", ""]
+        },
+        {
+          "kind": "vo",
+          "cells": ["3.13", "THE MIXER", "VO", "", "", "Then came an invitation she couldn't have planned. Through her friend Ellie, Nilu moved into the Brentwood home of David Zucker — the director of Airplane and Naked Gun.", "", "7", "", ""]
+        },
+        {
+          "kind": "ip",
+          "cells": ["3.14", "THE MIXER", "IP", "00:54:12", "00:55:00", "\"um, David's house was a creative cocoon during COV. So we, I moved in, in May of 2019 and, um, March of 2020 we had to go into lockdown. So Ellie and I had launched Peace Unleashed in 2019, thinking that we're gonna do a lot of in-person workshops and, um, events and all. We had all these ideas that we started in 2019, and then 2020 comes and we had to pivot to virtual. Thankfully we were in a space that was, that allowed for that. So, um, the house just became a creative oasis.\"", "appreciative — low", "29", "", ""]
+        },
+        {
+          "kind": "ip",
+          "cells": ["3.15", "THE MIXER", "IP", "00:55:45", "00:56:03", "\"Yeah, so I would say, um, of everyone living in that house, I was the most non-traditionally creative. 'cause Like, we had writers, musicians director, uh, and then we had me who had a knack for like, storytelling and media. But I had never like, done it as a career, like all these people. So it just showed me what was possible.\"", "self-aware — low", "11", "", ""]
+        },
+        {
+          "kind": "ip",
+          "cells": ["3.16", "THE MIXER", "IP", "00:56:40", "00:57:08", "\"living with David, I learned a lot. One in a com from a comedy perspective. 'cause he's just like a comedic genius, but just going for what you want. Uh, he grew up, uh, in a small town in Wisconsin, and him and his brothers and Jim just, they just wanted to make movies and make people laugh. And he was good at it. And he, he had been making people laugh since he was young. And they, when they moved out to LA they didn't know anything. They didn't know how to write a script, they didn't know anything about that. They just knew they wanted to do it.\"", "inspired — mid", "17", "", ""]
+        },
+        {
+          "kind": "ip",
+          "cells": ["3.17", "THE MIXER", "IP", "00:58:43", "00:58:52", "\"I think I hid for a long time and living there, I was still kind of hiding when I was living there, but, uh, it showed me what not hiding looked like.\"", "quietly vulnerable — mid", "6", "", ""]
+        },
+        {
+          "kind": "runtime",
+          "cells": ["", "THE MIXER", "", "", "", "", "", "", "SECTION RUNTIME: ~6.0 min | CUMULATIVE: ~11.2 min", ""]
+        },
+        {
+          "kind": "section_header",
+          "cells": ["4", "THE DANGEROUS PRAYER", "", "", "", "After years of spiritual seeking — from leaving the Baha'i faith to encountering Jesus through her sister and a stranger at a gas station in Salinas — Nilu prayed for God to remove what wasn't for her, quit her insurance career, and faced months of financial uncertainty with nothing but obedience.", "", "", "~5.5 min", ""]
+        },
+        {
+          "kind": "vo",
+          "cells": ["4.1", "THE DANGEROUS PRAYER", "VO", "", "", "In 2022, Nilu went viral. A ten-second video of her chanting \"Woman Life Freedom\" at a protest for Mahsa Amini — the young Iranian woman killed by morality police — reached nearly four million views. But the rage she channeled that day had been building since childhood.", "", "10", "", ""]
+        },
+        {
+          "kind": "ip",
+          "cells": ["4.2", "THE DANGEROUS PRAYER", "IP", "01:03:02", "01:03:20", "\"I don't know, I don't know what happened. Um, I had a lot of rage, anger that was unaddressed from all the years and all, everything I had witnessed with my uncle and my family and the Iranian women, uh, Iranian people. And it just, I opened up Pandora's box\"", "raw — high", "11", "", ""]
+        },
+        {
+          "kind": "vo",
+          "cells": ["4.3", "THE DANGEROUS PRAYER", "VO", "", "", "Something else was shifting. A year earlier, Nilu had given her life to Christ — a turn she never saw coming.", "", "5", "", ""]
+        },
+        {
+          "kind": "ip",
+          "cells": ["4.4", "THE DANGEROUS PRAYER", "IP", "01:14:34", "01:14:55", "\"I decided at that point that I did not want any part of organized religion, uh, that I saw it as a, as a vehicle to divide people and control people from personal experience and just from knowing history. Uh, and then from that point, I just spent 20 years, uh, seeking learning, unlearning\"", "defiant — mid", "13", "", ""]
+        },
+        {
+          "kind": "ip",
+          "cells": ["4.5", "THE DANGEROUS PRAYER", "IP", "01:16:25", "01:16:46", "\"uh, Jesus just kept showing up in my life. I don't know how else to say it. <laugh>, he, he was courting me, you can say. And, uh, eventually it just got so frequent that I decided, well, I've tried and I've looked under so many rocks, why not give Jesus a chance? Uh, let's see what this guy's all about.\"", "disarmed, almost amused — mid", "13", "", "Subject laughs at \"I don't know how else to say it\" — preserve the laugh. It punctures the heaviness and reveals her personality."]
+        },
+        {
+          "kind": "ip",
+          "cells": ["4.6", "THE DANGEROUS PRAYER", "IP", "01:18:00", "01:19:20", "\"And also have Jesus. And, uh, I was on a road trip one summer with my nephew and my sister had just told me, Hey, you know, you gotta like be all in for Jesus. It's not a, you can't, just being lukewarm is like the worst place to be as a Christian. So we go on this road trip and we're in Salinas, California, and, um, I'm stopping to get gas. And, and this guy walks by big, big dude, and he just like slams his hand on my tr on the front of the car. And he's like, you know, you can't take this with you. And it was a rental. And I said, I know it's a rental. I can't take it with me. He's like, no, you can't take any of this with you. I'm like, I, I don't know what you're talking about. And so he starts talking to me about Jesus and about about, um, about God. And I said, oh, yeah, yeah, I know Jesus. 'cause you know, I had accepted him and the Holy Spirit. He's like, do you though, but do you? And he said, you are dating Jesus right now. You need to marry Jesus. You're like, he's like, you're one foot in, one foot out. And he did this very like, animated thing and he was big dude. And he is like, imagine like Shaq doing this for you. He is like, yeah, you got one foot in spiritualism and one foot with Christianity. And he's like, and guess who owns that line? The devil owns the line.\"", "bewildered, building to awe — mid/high (verify against footage)", "48", "", "This is the longest IP in the cut sheet (~170 words). It is a single continuous story with escalating tension and a punchline that cannot be split without destroying the narrative beat. The \"Shaq\" comparison and \"the devil owns the line\" are the payoff lines. Justify keeping intact."]
+        },
+        {
+          "kind": "ip",
+          "cells": ["4.7", "THE DANGEROUS PRAYER", "IP", "01:19:25", "01:19:29", "\"And that, that really like, kind of hit me like a shockwave. 'cause my sister had just said that to me earlier in the day,\"", "stunned — mid", "3", "", ""]
+        },
+        {
+          "kind": "vo",
+          "cells": ["4.8", "THE DANGEROUS PRAYER", "VO", "", "", "Nilu was baptized, became sober, and went on a four-month solo mission trip through Europe. But the real test was still ahead.", "", "5", "", ""]
+        },
+        {
+          "kind": "ip",
+          "cells": ["4.9", "THE DANGEROUS PRAYER", "IP", "01:33:11", "01:33:18", "\"And so then I prayed a very dangerous prayer. And if you've ever prayed this prayer before, you know what I'm talking about.\"", "knowing — mid", "5", "", ""]
+        },
+        {
+          "kind": "ip",
+          "cells": ["4.10", "THE DANGEROUS PRAYER", "IP", "01:33:19", "01:33:41", "\"So I prayed. I asked God, I said, God, just take away what's not for me and only open the doors that are for me. And I knew when I prayed that, that my life was gonna change and I, and I was ready for it. 'cause the last time I prayed, this things changed and I kind of like spiraled into a depression. And I also said, God, but God gimme the grace and strength to be able to navigate the change, uh, with grace.\"", "resolute — mid/high (verify against footage)", "13", "", ""]
+        },
+        {
+          "kind": "ip",
+          "cells": ["4.11", "THE DANGEROUS PRAYER", "IP", "01:34:36", "01:34:58", "\"one night I was like three in the morning and I wake up and, and God's like, you gotta let this go. You gotta, you gotta quit ao. 'cause I was, again, I was holding onto it even though like, I really didn't want it. Um, and I said, I'm scared. I'm scared 'cause I don't know what to, what to do next. And so he said, have I ever failed you before? And I said, no.\"", "vulnerable — high", "13", "", ""]
+        },
+        {
+          "kind": "ip",
+          "cells": ["4.12", "THE DANGEROUS PRAYER", "IP", "01:42:54", "01:43:09", "\"all of the consulting gigs I was applying for, I was not getting hired and finances were getting tight. And, uh, I didn't know what was gonna, what was gonna come from it. So, um, just, I just continued to just trust that God knew what he was doing.\"", "weary faith — mid", "9", "", ""]
+        },
+        {
+          "kind": "runtime",
+          "cells": ["", "THE DANGEROUS PRAYER", "", "", "", "", "", "", "SECTION RUNTIME: ~5.5 min | CUMULATIVE: ~16.7 min", ""]
+        },
+        {
+          "kind": "section_header",
+          "cells": ["5", "WONDER", "", "", "", "Inspired by an Iranian woman doing runway shows in her living room under an oppressive regime, Nilu launched Wonder from her Boise apartment with a cracked iPhone, built it to millions of views and 35,000 subscribers, and now covers events as press — having finally found the lane where every piece of her life converges.", "", "", "~4.3 min", ""]
+        },
+        {
+          "kind": "vo",
+          "cells": ["5.1", "WONDER", "VO", "", "", "Then, in January, Nilu saw a video on Instagram that broke the spell.", "", "3", "", ""]
+        },
+        {
+          "kind": "ip",
+          "cells": ["5.2", "WONDER", "IP", "01:45:04", "01:46:17", "\"I was on Instagram and I see this, um, a video of a young woman in Iran. Her name is Layla, and she's living in Iran. This is present time and under the same this regime. And she wants to be a supermodel, like she wants to be a runway model. And she's creating content from her apartment and she's just like living it out. She like speaking it boldly into, you know, and believing in herself and just not holding back. And, um, um, she, she got some recognition, uh, by, uh, God, I'm blanking on the Dickens Dickinson. Janice Dickinson saw her videos and was just like, yeah, she has like the right face and the right, you know, uh, she's got the walk down everything. So I see this girl who's just like, so bold and, and not afraid that like, maybe the regime's gonna come and like, arrest her 'cause you're not supposed to do that in Iran. Uh, and I, and I'm like watching this and I'm like, what am I waiting for? Why am I waiting when this young woman living in an oppressive country is willing to take the risk in order to like live out her dream? So I decided I'm not gonna wait for the contest. I'm just gonna, I'm just gonna start doing it.\"", "galvanized — high", "44", "", "This IP runs ~170 words but is a single continuous revelation with an emotional peak at \"what am I waiting for?\" that drives the entire launch of Wonder. Cannot be split. Consider trimming from \"uh, God, I'm blanking on the Dickens Dickinson\" to \"Janice Dickinson\" if the stumble reads poorly on screen."]
+        },
+        {
+          "kind": "vo",
+          "cells": ["5.3", "WONDER", "VO", "", "", "Nilu launched Wonder on February 1st from her apartment in Boise, Idaho. No ring light. No tripod. Just the natural light from her window and a cracked iPhone.", "", "7", "", ""]
+        },
+        {
+          "kind": "ip",
+          "cells": ["5.4", "WONDER", "IP", "01:50:47", "01:51:16", "\"So, um, I was not working for a few months, so I didn't have, uh, capital to invest in this. Uh, I had, uh, the natural light from my window, uh, and my iPhone, which, uh, was cracked. So, uh, all my media stuff that I had, I had was in my storage, like my ring light, my tripod, things like that. I didn't have that handy, but I didn't want that to get in my way. I'm like, the Layla video really inspired me. 'cause this girl was doing like runway shows in her living room in some random city in Iran. So why can't I start Wonder in my apartment in Boise?\"", "defiant joy — mid", "18", "", ""]
+        },
+        {
+          "kind": "ip",
+          "cells": ["5.5", "WONDER", "IP", "01:47:22", "01:47:30", "\"And, uh, it picked up traction very fast. Like I had immediately, uh, videos that were hitting millions of views.\"", "matter-of-fact pride — low", "5", "", ""]
+        },
+        {
+          "kind": "vo",
+          "cells": ["5.6", "WONDER", "VO", "", "", "Within months, Wonder had 35,000 subscribers across platforms and multiple videos with millions of views. But for Nilu, the metrics weren't the point.", "", "6", "", ""]
+        },
+        {
+          "kind": "ip",
+          "cells": ["5.7", "WONDER", "IP", "01:53:54", "01:54:15", "\"And so I told the story when I did wonder and, and that video caught fire. I mean, people are like, they're like mad at me. They're like, I'm sitting here in my office crying because of this freaking lion cub that I, that probably doesn't even exist anymore. And, and, and that's what I mean, is like, I, I felt it. So then I presented in a way for people to feel it.\"", "amused, passionate — mid", "13", "", ""]
+        },
+        {
+          "kind": "ip",
+          "cells": ["5.8", "WONDER", "IP", "02:06:04", "02:06:29", "\"I had, um, one gentleman who watched one of my, one of my wonder stories, and he hadn't talked to his father in a long time. And watching the story, he decided to pick up the phone and call his dad Wow. And put away his ego and his pride and reconnect with his dad. That to me is real impact.\"", "moved — mid", "15", "", ""]
+        },
+        {
+          "kind": "ip",
+          "cells": ["5.9", "WONDER", "IP", "01:50:07", "01:50:31", "\"I call it a ministry because some of these stories, it's very clear that there is a higher power involved. But I don't need to say, I don't need to explicitly say it. I want the audience, the viewer, to recognize it on their own. 'cause that is so much more powerful than if I'm preaching it. Because if they can see it on their own, then then they see it. It's, it's not, then the resistance is gone.\"", "serene conviction — mid", "15", "", ""]
+        },
+        {
+          "kind": "runtime",
+          "cells": ["", "WONDER", "", "", "", "", "", "", "SECTION RUNTIME: ~4.3 min | CUMULATIVE: ~21.0 min", ""]
+        },
+        {
+          "kind": "section_header",
+          "cells": ["6", "THE SEED", "", "", "", "Nilu reflects on legacy as a 44-year-old woman without children, defining it as planting seeds in people's lives whose growth she'll never control, and frames Wonder as a gift she's stewarding for someone greater than herself.", "", "", "~1.5 min", ""]
+        },
+        {
+          "kind": "vo",
+          "cells": ["6.1", "THE SEED", "VO", "", "", "Nilu is 44 years old, unmarried, without children. When asked about legacy, she didn't hesitate.", "", "4", "", ""]
+        },
+        {
+          "kind": "ip",
+          "cells": ["6.2", "THE SEED", "IP", "02:24:30", "02:25:12", "\"that's a, that's a, uh, that makes me a little bit emotional. 'cause I am 44. I've never been married. I don't have children. Maybe I will, um, in the future, but, so traditional legacy, you know, you think about like having children and they live on, um, so I don't have that, at least I don't have that right now. But what I can do is I can, you know, leave a mark, leave plant a seed, um, in people's lives, and I have no idea where that seed will lead. Uh, it's not up to me. Once that seed is planted, uh, to then, you know, dictate what's gonna happen, uh, legacy in that, in that sense is an impact that you, that you leave in a person, in a community, in the world that lives long after you.\"", "vulnerable, resolute — mid/high (verify against footage)", "25", "", "This is the emotional climax and the callback to \"that seed was planted... and then it just wasn't watered for a long time\" from Section 3. Let it breathe."]
+        },
+        {
+          "kind": "ip",
+          "cells": ["6.3", "THE SEED", "IP", "02:32:04", "02:32:08", "\"I'm kneeling the dairy. I'm a woman in power because I don't need permission.\"", "declarative — mid", "3", "", "Transcription renders the name as \"kneeling the dairy\" — this is clearly \"Nilu Naderi.\" Verify against footage for clean audio."]
+        },
+        {
+          "kind": "runtime",
+          "cells": ["", "THE SEED", "", "", "", "", "", "", "SECTION RUNTIME: ~1.5 min | CUMULATIVE: ~22.5 min", ""]
+        }
+      ]
+    },
+    {
+      "id": "branding",
+      "excel_name": "Branding",
+      "banner_title": "APPENDIX F: SHOW BRANDING TAKES",
+      "banner_subtitle": "Show: Woman in Power — ⭐ EDITOR REFERENCE",
+      "headers": ["SHOW", "TAKE #", "START", "END", "VERBATIM QUOTE", "QUALITY", "CAMERA", "RECOMMENDED", "NOTES"],
+      "rows": [
+        {
+          "kind": "group_header",
+          "cells": ["Woman in Power", "", "", "", "", "", "", "", ""]
+        },
+        {
+          "kind": "data",
+          "cells": ["Woman in Power", "1", "00:10:16", "00:10:22", "\"I am Neely Nari. I'm a woman in power because I'm empowered by the creator above.\"", "Clean delivery but name transcription inconsistent; \"the creator above\" feels slightly vague", "", "No", ""]
+        },
+        {
+          "kind": "data",
+          "cells": ["Woman in Power", "2", "00:10:27", "00:10:31", "\"I'm Neely Nari. I'm a woman in power because I'm empowered by the God above.\"", "Slightly stronger than Take 1; self-corrects \"the God\" to seek \"God above\"; subject immediately questions own phrasing", "", "ALTERNATE", "If the show requires the spiritual framing that aligns with the subject's other branding takes. Cleaner name pronunciation."]
+        },
+        {
+          "kind": "data",
+          "cells": ["Woman in Power", "3", "00:10:43", "00:10:48", "\"I'm Neil Luna. I'm a woman empowered by the creator of the universe,\"", "Subject deliberately changed the formula from \"woman in power\" to \"woman empowered by\" — does NOT say \"woman in power.\" Subject acknowledged the change. Director confirmed it's fine but noted the formula. Strongest spiritual conviction but deviates from show branding format.", "", "No", ""]
+        },
+        {
+          "kind": "recommended",
+          "cells": ["Woman in Power", "4", "02:32:04", "02:32:08", "\"I'm kneeling the dairy. I'm a woman in power because I don't need permission.\"", "Name garbled in transcription (clearly \"Nilu Naderi\"). Verify audio. Strong, punchy completion. Different thematic emphasis than Takes 1-3 (autonomy vs. divine empowerment).", "", "★ RECOMMENDED", "\"I don't need permission\" is the most distinctive and memorable completion, aligns with the documentary's themes of hiding/permission/autonomy, and was delivered after the full interview when the subject was most relaxed and authentic. Verify name audio quality."]
+        },
+        {
+          "kind": "data",
+          "cells": ["Woman in Power", "5", "02:32:20", "02:32:22", "\"I'm Neela Nader and I am a woman in power.\"", "Clean delivery of the base phrase WITHOUT the \"because\" completion. Stand-alone bumper/graphic use only.", "", "No", ""]
+        },
+        {
+          "kind": "data",
+          "cells": ["Woman in Power", "6", "02:32:34", "02:32:36", "\"I'm Neland and Dairy and I am a woman in power.\"", "Name garbled in transcription. Verify audio. Same as Take 5 — base phrase without completion. Final take with clap for sync.", "", "No", ""]
+        }
+      ]
+    },
+    {
+      "id": "alts",
+      "excel_name": "Alts",
+      "banner_title": "APPENDIX G: ALTERNATIVE & UNUSED TAKES",
+      "banner_subtitle": "⭐ EDITOR REFERENCE",
+      "headers": ["TOPIC", "TAKE #", "START", "END", "QUOTE (first 100 chars)", "WORD COUNT", "TONE", "STATUS", "SELECTION RATIONALE"],
+      "rows": [
+        {
+          "kind": "topic_header",
+          "cells": ["Self-Introduction Takes", "", "", "", "", "", "", "", ""]
+        },
+        {
+          "kind": "weaker",
+          "cells": ["Self-Introduction", "1 (FALSE START)", "00:08:16", "00:08:17", "\"Hi. I'm Ni l Nader.\"", "5", "N/A", "Unusable", "Director corrected — \"Don't say hi.\""]
+        },
+        {
+          "kind": "selected",
+          "cells": ["Self-Introduction", "2 (PRIMARY — used in HOOK)", "00:08:23", "00:08:26", "\"I'm Ni l Nader. I'm the creator and host of Wonder.\"", "11", "confident — low", "★ SELECTED", "Take 2 wins on concision and brand clarity. No false start, no filler, instant identity landing."]
+        },
+        {
+          "kind": "alt_close",
+          "cells": ["Self-Introduction", "3", "01:29:45", "01:29:57", "\"So, fast forward to today. Uh, I am the creator and host of Wonder, uh, which is a series of stori...", "24", "warm — low", "Alt — social cuts", "More descriptive but less punchy. \"Fast forward to today\" is a prompted structure. Good for social cut with more context."]
+        },
+        {
+          "kind": "topic_header",
+          "cells": ["What Inspires You About Wonder", "", "", "", "", "", "", "", ""]
+        },
+        {
+          "kind": "selected",
+          "cells": ["What Inspires You About Wonder", "1 (PRIMARY — used in HOOK)", "00:08:34", "00:08:43", "\"Well, what inspires me about Wonder is Wonder is an assignment. Um, it's not mine. Uh, I'm just st...", "29", "quietly convicted — mid", "★ SELECTED", "Take 1 wins on completeness and delivery. The \"So that makes me show up very differently\" ending is the kicker that makes the hook work."]
+        },
+        {
+          "kind": "weaker",
+          "cells": ["What Inspires You About Wonder", "2", "01:49:19", "01:49:26", "\"I, uh, I say that I wonder is not mine. Uh, I'm, it's, this is an assignment a...\"", "~20", "serene — low", "Weaker", "Same idea, less clean delivery. Stammer at beginning."]
+        },
+        {
+          "kind": "topic_header",
+          "cells": ["Escape from Iran", "", "", "", "", "", "", "", ""]
+        },
+        {
+          "kind": "selected",
+          "cells": ["Escape from Iran", "Parents saying \"don't lie\"", "00:25:07", "00:25:47", "\"I remember when we were escaping, uh, we were in the middle of the night, we were camped out at som...", "~95", "vivid disbelief — mid", "★ SELECTED", "Told once in a continuous run (00:25:07–00:28:17). No retakes."]
+        },
+        {
+          "kind": "selected",
+          "cells": ["Escape from Iran", "Truck and mother praying", "00:27:30", "00:28:17", "\"And what they, the the plan was essentially to put us at the back of these trucks that were carryin...", "~120", "somber → tender — mid", "★ SELECTED", "Two sub-beats pulled from single continuous run."]
+        },
+        {
+          "kind": "alt_close",
+          "cells": ["Escape from Iran", "First failed escape attempt", "00:28:18", "00:28:56", "\"Uh, so we actually, uh, the first attempt that we did was six months before we ...\"", "~50", "somber — mid", "Alt — extension", "Adds stakes (they failed the first time, lost all possessions) but extends section by ~40 sec."]
+        },
+        {
+          "kind": "topic_header",
+          "cells": ["Uncle Sirus — Prison Visit", "", "", "", "", "", "", "", ""]
+        },
+        {
+          "kind": "selected",
+          "cells": ["Uncle Sirus — Prison Visit", "Full prison visit sequence", "00:29:27", "00:31:20", "\"another kind of distinct memory I have from Iran was, um, when I was five years old, my uncle, my d...", "~200", "measured gravity → steely — mid/high", "★ SELECTED", "Told once. Single continuous story. No retakes. Two IPs pulled."]
+        },
+        {
+          "kind": "topic_header",
+          "cells": ["Radio Station On-Air Disaster", "", "", "", "", "", "", "", ""]
+        },
+        {
+          "kind": "selected",
+          "cells": ["Radio Station On-Air Disaster", "Full story", "00:21:11", "00:21:53", "\"and I around behind the mixer, and I was just playing around and you can, you know, play music in t...", "~130", "comedic — mid", "★ SELECTED", "Told once. No retakes. Full story captured in single IP."]
+        },
+        {
+          "kind": "alt_close",
+          "cells": ["Radio Station On-Air Disaster", "Meeting the newscaster later", "00:22:00", "00:22:10", "\"Uh, and years, uh, a couple years after that, I ended up meeting the one, the, the gentleman whose...", "~30", "amused — low", "Alt — optional button", "Nice button on the story but not essential. Could add ~8 seconds if editor wants a cleaner scene ending."]
+        },
+        {
+          "kind": "topic_header",
+          "cells": ["\"Seed\" Metaphor", "", "", "", "", "", "", "", ""]
+        },
+        {
+          "kind": "selected",
+          "cells": ["\"Seed\" Metaphor", "1 (PRIMARY — used in Section 3)", "00:23:36", "00:23:45", "\"that seed was planted or it, um, blossomed early, and then it just wasn't water...\"", "~25", "resigned — low", "★ SELECTED", "Perfect metaphor. Lands clean."]
+        },
+        {
+          "kind": "selected",
+          "cells": ["\"Seed\" Metaphor", "2 (CALLBACK — used in Section 6)", "02:24:58", "02:25:12", "\"But what I can do is I can, you know, leave a mark, leave plant a seed, um, in ...\"", "~45", "vulnerable, resolute — mid/high", "★ SELECTED", "Uses \"seed\" again in legacy context. The callback is deliberate in the cut."]
+        },
+        {
+          "kind": "topic_header",
+          "cells": ["Spiritual Turning Points — \"I rejected organized religion\"", "", "", "", "", "", "", "", ""]
+        },
+        {
+          "kind": "selected",
+          "cells": ["\"I rejected organized religion\"", "PRIMARY", "01:14:34", "01:14:55", "\"I decided at that point that I did not want any part of organized religion, uh, that I saw it as a,...", "~45", "defiant — mid", "★ SELECTED", "Clean, declarative. Used in Section 4."]
+        },
+        {
+          "kind": "alt_close",
+          "cells": ["\"I rejected organized religion\"", "ALT", "01:17:08", "01:17:12", "\"never in my life did I think I was gonna go back to organized religion.\"", "~14", "wistful — low", "Alt", "Shorter, more reflective. Could replace primary if editor wants a lighter touch."]
+        },
+        {
+          "kind": "topic_header",
+          "cells": ["\"Jesus kept showing up\"", "", "", "", "", "", "", "", ""]
+        },
+        {
+          "kind": "selected",
+          "cells": ["\"Jesus kept showing up\"", "Single take", "01:16:25", "01:16:46", "\"uh, Jesus just kept showing up in my life. I don't know how else to say it. <laugh>, he, he was cou...", "~55", "disarmed, almost amused — mid", "★ SELECTED", "Single take (01:16:25–01:16:46). No retakes. Used in Section 4."]
+        },
+        {
+          "kind": "topic_header",
+          "cells": ["\"Salinas gas station / Michael\"", "", "", "", "", "", "", "", ""]
+        },
+        {
+          "kind": "selected",
+          "cells": ["\"Salinas gas station / Michael\"", "Single take", "01:18:00", "01:19:29", "\"And also have Jesus. And, uh, I was on a road trip one summer with my nephew and my sister had just...", "~170", "bewildered, building to awe — mid/high", "★ SELECTED", "Single take. Extended off-camera retelling at 01:20:40–01:21:31 adds detail (the rental was a Mercedes, the man \"came outta nowhere\") but is off-camera and not usable for primary edit. Could inform B-roll direction."]
+        },
+        {
+          "kind": "topic_header",
+          "cells": ["\"The Dangerous Prayer\"", "", "", "", "", "", "", "", ""]
+        },
+        {
+          "kind": "selected",
+          "cells": ["\"The Dangerous Prayer\"", "PRIMARY (used in Section 4)", "01:33:14", "01:33:41", "\"And so then I prayed a very dangerous prayer... God, just take away what's not for me and only open...", "~80", "resolute — mid/high", "★ SELECTED", "Strongest delivery. Complete thought. No alternative takes — told once."]
+        },
+        {
+          "kind": "topic_header",
+          "cells": ["\"Have I ever failed you before?\"", "", "", "", "", "", "", "", ""]
+        },
+        {
+          "kind": "selected",
+          "cells": ["\"Have I ever failed you before?\"", "PRIMARY (used in Section 4)", "01:34:36", "01:34:58", "\"one night I was like three in the morning and I wake up and, and God's like, you gotta let this go....", "~70", "vulnerable — high", "★ SELECTED", "Single take. The 3 AM framing and the direct-quote dialogue with God make this the emotional hinge of the documentary."]
+        },
+        {
+          "kind": "topic_header",
+          "cells": ["Wonder Ministry Philosophy", "", "", "", "", "", "", "", ""]
+        },
+        {
+          "kind": "selected",
+          "cells": ["Wonder Ministry Philosophy", "PRIMARY (used in Section 5)", "01:50:07", "01:50:31", "\"I call it a ministry because some of these stories, it's very clear that there is a higher power in...", "~70", "serene conviction — mid", "★ SELECTED", "Best articulation of the Wonder philosophy. \"The resistance is gone\" is the payoff line."]
+        },
+        {
+          "kind": "weaker",
+          "cells": ["Wonder Ministry Philosophy", "ALT", "01:49:19", "01:49:30", "\"I, uh, I say that I wonder is not mine. Uh, I'm, it's, this is an assignment a...\"", "~20", "serene — low", "Weaker", "Same idea, less polished. Stammer."]
+        },
+        {
+          "kind": "topic_header",
+          "cells": ["Legacy", "", "", "", "", "", "", "", ""]
+        },
+        {
+          "kind": "selected",
+          "cells": ["Legacy", "Single take (used in Section 6)", "02:24:30", "02:25:12", "\"that's a, that's a, uh, that makes me a little bit emotional. 'cause I am 44. I've never been marr...", "~130", "vulnerable, resolute — mid/high", "★ SELECTED", "Single take. No retakes. The only other legacy-adjacent material is below."]
+        },
+        {
+          "kind": "alt_close",
+          "cells": ["Legacy", "Legacy-adjacent (stewardship)", "02:26:26", "02:27:10", "\"Yes, I'm playing a critical piece. I'm the legs, the arms, the brain. But ther...\"", "~50", "reverent — mid", "Alt — social cut", "Strong material for social cut or extended edit. Redundant with Hook IP for the 23-min version."]
+        }
+      ]
+    },
+    {
+      "id": "gaps",
+      "excel_name": "Gaps",
+      "banner_title": "APPENDIX E: VIEWER KNOWLEDGE GAPS",
+      "banner_subtitle": "",
+      "headers": ["REFERENCE", "WHY VIEWER WOULDN'T KNOW", "HOW ADDRESSED", "STATUS"],
+      "rows": [
+        {
+          "kind": "data",
+          "cells": ["Iranian Revolution (1979)", "General audience may not know timeline or consequences", "VO: \"born in Iran in 1982, two years after the Islamic Revolution\"", "✅ Covered"]
+        },
+        {
+          "kind": "data",
+          "cells": ["Baha'i faith", "Most viewers have never heard of this religion", "VO: \"Nilu's family is Baha'i — a faith that emerged after Islam and is considered blasphemy by the ruling regime\"", "✅ Covered"]
+        },
+        {
+          "kind": "data",
+          "cells": ["Mother converting from Islam to Baha'i", "Viewers won't understand why this is dangerous", "VO: \"Her mother had converted from Islam, the worst possible offense\"", "✅ Covered"]
+        },
+        {
+          "kind": "data",
+          "cells": ["Homa Asan", "Unknown figure", "VO: \"Iranian cultural programs run by an expat journalist named Homa Asan\"", "✅ Covered"]
+        },
+        {
+          "kind": "data",
+          "cells": ["RBCS Iranian radio", "Obscure local station", "Subject names it in IP; context sufficient", "✅ Covered"]
+        },
+        {
+          "kind": "data",
+          "cells": ["UC Irvine / physics degree", "Subject mentions wanting to be an astronaut", "VO: \"Nilu studied physics at UC Irvine, dreaming of becoming an astronaut\"", "✅ Covered"]
+        },
+        {
+          "kind": "data",
+          "cells": ["Mount Sinai / Montefiore", "NYC hospital systems", "VO compresses to \"running school-based health clinics in the Bronx\"", "✅ Covered"]
+        },
+        {
+          "kind": "data",
+          "cells": ["Management consulting at Top Tier", "Boutique firm; unknown", "VO: \"transitioned into management consulting\" (firm name omitted)", "✅ Covered"]
+        },
+        {
+          "kind": "data",
+          "cells": ["2020 Meditate for Peace", "Subject's meditation series", "VO: \"Nilu and two friends created a guided meditation series called 2020 Meditate for Peace\"", "✅ Covered"]
+        },
+        {
+          "kind": "data",
+          "cells": ["Insight Timer", "Meditation app", "VO: \"The app Insight Timer featured it\"", "✅ Covered"]
+        },
+        {
+          "kind": "data",
+          "cells": ["David Zucker / Zucker Brothers", "Viewers under 40 may not know", "VO: \"David Zucker — the director of Airplane and Naked Gun\"", "✅ Covered"]
+        },
+        {
+          "kind": "data",
+          "cells": ["Peace Unleashed", "Nilu's mindfulness company", "Subject names it in IP; context sufficient from surrounding VO", "✅ Covered"]
+        },
+        {
+          "kind": "data",
+          "cells": ["Mahsa Amini / Woman Life Freedom", "Many viewers may know vaguely but not details", "VO: \"Mahsa Amini — the young Iranian woman killed by morality police\"", "✅ Covered"]
+        },
+        {
+          "kind": "data",
+          "cells": ["AO / Globe Life", "Insurance company", "Not named in selected IPs; context is \"quit her insurance career\" in VO", "✅ Covered"]
+        },
+        {
+          "kind": "data",
+          "cells": ["Book of Acts", "Biblical book", "Not referenced in selected IPs; cut with surrounding material", "✅ Covered"]
+        },
+        {
+          "kind": "data",
+          "cells": ["Stan / Dare to Dream contest", "Unknown company/contest", "Cut from documentary; not in selected IPs", "✅ Covered"]
+        },
+        {
+          "kind": "data",
+          "cells": ["Janice Dickinson", "Supermodel/media figure", "Subject names her in IP; context sufficient (\"saw her videos\")", "⚠️ Minor gap"]
+        },
+        {
+          "kind": "data",
+          "cells": ["Beguines (12th century European women)", "Historical group", "Referenced in subject's answer but not in selected IPs; cut", "✅ Covered"]
+        },
+        {
+          "kind": "data",
+          "cells": ["Rededicate 250", "DC event", "Referenced in subject's answer but not in selected IPs; cut", "✅ Covered"]
+        }
+      ]
+    },
+    {
+      "id": "music",
+      "excel_name": "Music",
+      "banner_title": "APPENDIX D: MUSIC & SCORE NOTES",
+      "banner_subtitle": "",
+      "headers": ["SECTION", "MUSIC BED", "NOTES"],
+      "rows": [
+        {
+          "kind": "silence",
+          "cells": ["HOOK (0:00–0:40)", "Silence or a single held note", "Let her voice carry. No music under either IP."]
+        },
+        {
+          "kind": "data",
+          "cells": ["THROUGH THE DESERT (0:40–5:10)", "Low, ambient tension. Middle Eastern string instrumentation (tar or setar) at extremely low volume during the escape sequence.", "Drop to near-silence during the uncle prison visit. A single sustained note under \"he was executed by the regime in 1988.\""]
+        },
+        {
+          "kind": "data",
+          "cells": ["THE MIXER (5:10–11:10)", "Warm, playful underscoring for the radio station stories. Consider licensing \"Genius of Love\" by Tom Tom Club for a brief bed under the on-air disaster story (Nilu herself references this song).", "Shift to something more contemplative and yearning for \"that seed was planted... and then it just wasn't watered.\" Transition to urban/driving music for the New York/consulting montage VO bridges."]
+        },
+        {
+          "kind": "data",
+          "cells": ["THE DANGEROUS PRAYER (11:10–16:70)", "The emotional center. Start sparse.", "The Salinas gas station sequence should have no music — let the dialogue carry (\"the devil owns the line\"). Introduce a building piano motif under \"have I ever failed you before?\" that resolves on \"And I said, no.\" Hold silence for a beat after."]
+        },
+        {
+          "kind": "data",
+          "cells": ["WONDER (16:70–21:00)", "Energy shifts. The Layla story should have a pulse — something hopeful and propulsive.", "Under the cracked iPhone / Boise apartment IP, a sense of arrival. Under the \"lion cub\" comment and the \"man who called his father,\" let the music get warm and full. The ministry IP (\"the resistance is gone\") should close with the music pulling back to let her words stand alone."]
+        },
+        {
+          "kind": "data",
+          "cells": ["THE SEED (21:00–22:50)", "Minimal. A single piano line or ambient pad.", "Let the vulnerability of the legacy answer sit in near-silence. The final \"I don't need permission\" should land dry — no music — followed by a beat of silence before credits music begins."]
+        },
+        {
+          "kind": "data",
+          "cells": ["CREDITS (22:50–25:00)", "Full, warm theme.", "Consider incorporating the held note from the opening, resolved into a full arrangement."]
+        }
+      ]
+    },
+    {
+      "id": "excluded",
+      "excel_name": "Excluded",
+      "banner_title": "APPENDIX A: EXCLUDED CONTENT",
+      "banner_subtitle": "",
+      "headers": ["START", "END", "CONTENT TAG", "WORD COUNT", "EMOTIONAL WEIGHT", "REASON EXCLUDED", "RECONSIDER?"],
+      "rows": [
+        {
+          "kind": "data",
+          "cells": ["00:01:14", "00:06:45", "Mic setup, small talk, DC weather, Idaho chatter", "", "None", "Off-camera/crew; no documentary value", "No"]
+        },
+        {
+          "kind": "data",
+          "cells": ["00:06:45", "00:07:52", "Zucker Brothers small talk, Naked Gun, slate", "", "None", "Pre-interview banter; crew logistics", "No"]
+        },
+        {
+          "kind": "data",
+          "cells": ["00:08:53", "00:09:08", "Wonder platform description (TikTok, Instagram, YouTube)", "", "Low", "Informational; covered better by VO and other IPs", "No"]
+        },
+        {
+          "kind": "data",
+          "cells": ["00:09:09", "00:09:50", "\"Personal mission\" answer — generic curiosity language", "", "Low", "Meandering; stronger version of this idea delivered elsewhere (ministry IP at 01:50:07)", "No"]
+        },
+        {
+          "kind": "data",
+          "cells": ["00:11:15", "00:13:17", "Boise small talk, Idaho trivia, air show, commissioner scandal", "", "None", "Off-camera banter between sections", "No"]
+        },
+        {
+          "kind": "data",
+          "cells": ["00:15:48", "00:16:22", "Iranian community in LA/Orange County — general info", "", "Low", "Informational; no emotional weight; context folded into VO", "No"]
+        },
+        {
+          "kind": "reconsider_yes",
+          "cells": ["00:17:02", "00:17:47", "Popcorn reading / ESL story", "~60", "Mid", "Charming but not essential to the 23-minute arc; pacing choice", "Yes — Priority 2 extension (~50 sec). Nilu in third grade, called on to read, couldn't read English, told a story based on the pictures. Graduated ESL in one to two weeks."]
+        },
+        {
+          "kind": "data",
+          "cells": ["00:18:12", "00:18:50", "How assimilation helped and hurt — abstract", "", "Low", "Generic reflection; the uncle story and \"hiding\" line deliver this better", "No"]
+        },
+        {
+          "kind": "data",
+          "cells": ["00:19:02", "00:19:17", "Precocious kid, radio show bridge question", "", "None", "Director question", "No"]
+        },
+        {
+          "kind": "data",
+          "cells": ["00:19:17", "00:20:07", "Homa Asan backstory — journalist for the Shah", "", "Low", "Context folded into VO; too detailed for runtime", "No"]
+        },
+        {
+          "kind": "data",
+          "cells": ["00:22:00", "00:22:37", "Meeting the Atlanta newscaster years later", "", "Low", "Nice anecdote but non-essential", "No"]
+        },
+        {
+          "kind": "data",
+          "cells": ["00:24:00", "00:25:05", "Baha'i faith explanation — theological detail", "", "Low", "Core context folded into VO; too much doctrine for cold viewer", "No"]
+        },
+        {
+          "kind": "data",
+          "cells": ["00:26:00", "00:27:10", "Fond memories of Iran — Caspian Sea, four seasons", "", "Mid", "Beautiful but cuts against pacing; establishes warmth already conveyed", "No"]
+        },
+        {
+          "kind": "reconsider_yes",
+          "cells": ["00:28:18", "00:29:24", "First escape attempt failed, lost all possessions", "~50", "High", "Strong material but cut for runtime; uncle prison visit is more impactful", "Yes — Priority 1 extension (~45 sec). The family lost all their possessions when the first crossing was aborted. Deepens the stakes of the desert section."]
+        },
+        {
+          "kind": "data",
+          "cells": ["00:31:31", "00:32:38", "Teenage years — music (Third Eye Blind, Insync), shy/introverted", "", "Low", "Low emotional yield; doesn't advance story", "No"]
+        },
+        {
+          "kind": "data",
+          "cells": ["00:32:42", "00:33:38", "Wanted to be astronaut — declared in 3rd/4th grade", "", "Low", "Covered in VO bridge", "No"]
+        },
+        {
+          "kind": "data",
+          "cells": ["00:33:57", "00:35:22", "Physics degree, MRI company, biomedical research", "", "Low", "Informational; condensed into VO", "No"]
+        },
+        {
+          "kind": "data",
+          "cells": ["00:35:22", "00:38:39", "Mount Sinai, Montefiore, school-based clinics — detailed", "", "Mid", "Important career chapter but detailed beyond what 23 min allows; key point (heart but no money) captured in selected IP", "No"]
+        },
+        {
+          "kind": "data",
+          "cells": ["00:39:07", "00:40:23", "New York cultural experience — coffee shop, recreating self", "", "Low", "Nice but generic personal growth language", "No"]
+        },
+        {
+          "kind": "data",
+          "cells": ["00:40:38", "00:42:27", "Leaving New York — city \"speaking to you,\" pickpocketed", "", "Low", "Interesting but not essential; transition to LA covered by VO", "No"]
+        },
+        {
+          "kind": "reconsider_yes",
+          "cells": ["00:43:43", "00:46:16", "Non-profit to for-profit transition, dodgy Oakland hotel", "~80", "Mid", "The hotel story is charming but doesn't serve the 23-min arc", "Yes — Priority 3 extension (~50 sec). Booking a $60/night dodgy hotel for a consulting trip to Kaiser because of her scarcity mindset from non-profit work. Mentor finds out and makes her move. Illustrates the non-profit-to-for-profit transition with specificity and humor."]
+        },
+        {
+          "kind": "data",
+          "cells": ["00:47:04", "00:48:46", "2020 Meditate for Peace — origin, 20-day series, Insight Timer", "", "Low", "Core facts covered by selected IP and VO; full backstory too detailed", "No"]
+        },
+        {
+          "kind": "reconsider_maybe",
+          "cells": ["00:49:00", "00:50:03", "Meditation dinner parties — origin through COVID", "", "Low", "Interesting but not essential; context captured in Zucker house section", "Maybe — Priority 4 extension (~15 sec). \"We would lure people in with free food and then teach them how to meditate.\" Good laugh line."]
+        },
+        {
+          "kind": "data",
+          "cells": ["00:50:55", "00:54:10", "How Nilu met David Zucker, Ellie's relationship, Peace Unleashed company", "", "Low", "Backstory leading to the house; condensed into VO bridge", "No"]
+        },
+        {
+          "kind": "data",
+          "cells": ["00:55:00", "00:55:45", "Band Hot Crazy, treehouse, David's books during COVID", "", "Low", "Fun details but not essential", "No"]
+        },
+        {
+          "kind": "data",
+          "cells": ["00:57:08", "00:58:42", "\"Going for it\" — not waiting for permission, comparison trap", "", "Mid", "Good material but the \"hiding\" line captures the same idea more concisely", "No"]
+        },
+        {
+          "kind": "data",
+          "cells": ["00:59:04", "01:02:07", "Woman Life Freedom setup — Mahsa Amini backstory, sober mind directive", "", "Mid", "Core Amini context in VO; sober mind directive covered in spiritual journey section", "No"]
+        },
+        {
+          "kind": "data",
+          "cells": ["01:02:07", "01:03:02", "Protest outfit, playlist, Zombie by Cranberries, sister drove", "", "Low", "Setup material; \"Pandora's box\" IP captures the moment", "No"]
+        },
+        {
+          "kind": "data",
+          "cells": ["01:03:24", "01:06:10", "Mahsa Amini retell, silent concerts with Murray, Woman Life Freedom continued", "", "Mid", "Important context but Amini explanation addressed in VO; concerts not essential", "No"]
+        },
+        {
+          "kind": "data",
+          "cells": ["01:06:39", "01:08:16", "Mission trip setup — directive from God, consulting gig, four months in Europe", "", "Low", "Condensed into single VO bridge", "No"]
+        },
+        {
+          "kind": "data",
+          "cells": ["01:08:25", "01:11:41", "Paris homeless man story — full detail", "", "High", "Powerful standalone story but too long for 23-min cut; not essential to Wonder's origin", "No"]
+        },
+        {
+          "kind": "data",
+          "cells": ["01:12:01", "01:14:15", "Spiritual journey — 9/11, friend's mosque, mom's advice, Baha'i community politics", "", "Mid", "Strong material; selected the key turning point (rejecting organized religion)", "No"]
+        },
+        {
+          "kind": "data",
+          "cells": ["01:15:12", "01:16:25", "20 years of seeking — Eastern philosophies, episodic depression, sister's help", "", "Mid", "Context in VO; depression and sister's role serve as bridge to Jesus", "No"]
+        },
+        {
+          "kind": "data",
+          "cells": ["01:17:06", "01:18:00", "Lukewarm years as believer, Kabbalah, old ways", "", "Low", "Context covered by Salinas gas station story", "No"]
+        },
+        {
+          "kind": "data",
+          "cells": ["01:20:00", "01:22:45", "Break, Salinas off-camera conversation, Michael the stranger", "", "None", "Off-camera; the on-camera IP captures the encounter", "No"]
+        },
+        {
+          "kind": "data",
+          "cells": ["01:23:15", "01:29:06", "Extended break, Genius of Love callback, crew logistics, Boise/Idaho chat", "", "None", "Off-camera", "No"]
+        },
+        {
+          "kind": "data",
+          "cells": ["01:29:45", "01:31:10", "Peace Unleashed dissolved, back to consulting, pivoted to life insurance", "", "Low", "Covered in VO bridge to dangerous prayer", "No"]
+        },
+        {
+          "kind": "data",
+          "cells": ["01:32:00", "01:33:10", "Vision board, 12-14 hour days, wall hit", "", "Low", "Setup to dangerous prayer; condensed", "No"]
+        },
+        {
+          "kind": "data",
+          "cells": ["01:35:00", "01:37:00", "Consuming testimonies, House of David, Testament, Scorsese's Saints, Book of Acts", "", "Low", "Detail about spiritual consumption period; not essential", "No"]
+        },
+        {
+          "kind": "data",
+          "cells": ["01:37:00", "01:42:54", "Church involvement, fasting lottery, car dashboard, kids ministry, mission applications rejected", "", "Mid", "The lottery/dashboard story is extraordinary but extends the spiritual section beyond what the pacing can absorb; mission rejections covered by \"not getting hired\" IP", "No"]
+        },
+        {
+          "kind": "data",
+          "cells": ["01:43:43", "01:45:00", "Stan Dare to Dream contest, Under Pressure idea", "", "Low", "Setup to Wonder; the Layla video is the real catalyst", "No"]
+        },
+        {
+          "kind": "data",
+          "cells": ["01:45:00", "01:47:22", "Under Pressure to Wonder name pivot, emotional signature", "", "Low", "Good detail but the launch is better captured in the apartment/iPhone IP", "No"]
+        },
+        {
+          "kind": "data",
+          "cells": ["01:51:33", "01:52:13", "Audience description — seekers, no formal avatar", "", "Low", "Generic", "No"]
+        },
+        {
+          "kind": "data",
+          "cells": ["01:52:13", "01:53:54", "Misfit lion cub backstory — detailed", "", "Mid", "Used the punchline (people mad at her) without the full 15-min documentary recap", "No"]
+        },
+        {
+          "kind": "data",
+          "cells": ["01:54:47", "01:58:41", "Process evolution — AI tools, metrics, KPIs, 30-day challenge, Jen the good news girl", "", "Low", "Informational about process; doesn't serve story arc", "No"]
+        },
+        {
+          "kind": "data",
+          "cells": ["01:58:44", "02:04:11", "Wonder ecosystem, long form content, Abdul Hussein story, Rededicate 250, Iceland trip vision, looking back on journey", "", "Mid", "Some strong material but section exceeds runtime; \"found my lane\" and \"Iran Schindler\" could be alternates for social cuts", "No"]
+        },
+        {
+          "kind": "data",
+          "cells": ["02:04:11", "02:06:00", "Impact measurement question — setup", "", "None", "Director question", "No"]
+        },
+        {
+          "kind": "data",
+          "cells": ["02:06:51", "02:07:30", "Off-camera — Selma discussion", "", "None", "Off-camera", "No"]
+        },
+        {
+          "kind": "data",
+          "cells": ["02:07:30", "02:16:02", "Extended off-camera — Cuba/Iran politics, regime conversation", "", "None", "Off-camera; not for documentary", "No"]
+        },
+        {
+          "kind": "data",
+          "cells": ["02:16:10", "02:19:36", "Break, logistics, notes review", "", "None", "Off-camera", "No"]
+        },
+        {
+          "kind": "data",
+          "cells": ["02:19:36", "02:22:12", "Three pieces of advice (integrity, curiosity, coachability)", "", "Low", "Solid advice but generic; doesn't serve the story arc", "No"]
+        },
+        {
+          "kind": "data",
+          "cells": ["02:22:13", "02:24:05", "Building the plane while flying it, water metaphor", "", "Low", "Generic business advice", "No"]
+        },
+        {
+          "kind": "data",
+          "cells": ["02:26:06", "02:27:11", "What it means to be a Woman in Power — stewarding", "", "Mid", "Partially redundant with Hook IP and close; \"empowered by something greater\" less impactful than \"don't need permission\"", "No"]
+        },
+        {
+          "kind": "data",
+          "cells": ["02:27:20", "02:30:30", "Faith in daily life, Busboys and Poets, prison author story", "", "Mid", "Good material but extends beyond runtime; the \"cameras on or off\" idea is strong for social cuts", "No"]
+        },
+        {
+          "kind": "data",
+          "cells": ["02:30:31", "02:35:54", "Final word on Wonder, branding takes, testimonial for Inside Success", "", "Low", "Branding in Appendix F; testimonial is show-related content, not documentary", "No"]
+        },
+        {
+          "kind": "reconsider_yes",
+          "cells": ["01:48:15", "01:49:04", "Beguines story — 12th-century European women", "~60", "Mid", "Women in 12th-century Europe who created their own communities outside of the available options (nun, wife, sex worker). Audience response: \"let's do that now.\"", "Yes — Priority 5 extension (~50 sec). Shows Wonder's impact in action."]
+        }
+      ]
+    },
+    {
+      "id": "runtime",
+      "excel_name": "Runtime",
+      "banner_title": "APPENDIX H: FINAL RUNTIME ESTIMATE",
+      "banner_subtitle": "",
+      "headers": ["SECTION", "IP WORDS", "VO WORDS", "EST. RUNTIME", "NOTES"],
+      "rows": [
+        {
+          "kind": "data",
+          "cells": ["HOOK", "62", "0", "~0.5 min", "IP Time (÷150): 0.41 min | VO Time (÷160): 0 | Subtotal: 0.41 | +15% Buffer: 0.47"]
+        },
+        {
+          "kind": "data",
+          "cells": ["THROUGH THE DESERT", "450", "72", "~4.0 min", "IP Time (÷150): 3.00 min | VO Time (÷160): 0.45 | Subtotal: 3.45 | +15% Buffer: 3.97"]
+        },
+        {
+          "kind": "data",
+          "cells": ["THE MIXER", "530", "85", "~4.7 min", "IP Time (÷150): 3.53 min | VO Time (÷160): 0.53 | Subtotal: 4.06 | +15% Buffer: 4.67"]
+        },
+        {
+          "kind": "data",
+          "cells": ["THE DANGEROUS PRAYER", "560", "60", "~4.7 min", "IP Time (÷150): 3.73 min | VO Time (÷160): 0.38 | Subtotal: 4.11 | +15% Buffer: 4.73"]
+        },
+        {
+          "kind": "data",
+          "cells": ["WONDER", "490", "50", "~4.1 min", "IP Time (÷150): 3.27 min | VO Time (÷160): 0.31 | Subtotal: 3.58 | +15% Buffer: 4.12"]
+        },
+        {
+          "kind": "data",
+          "cells": ["THE SEED", "175", "15", "~1.5 min", "IP Time (÷150): 1.17 min | VO Time (÷160): 0.09 | Subtotal: 1.26 | +15% Buffer: 1.45"]
+        },
+        {
+          "kind": "totals",
+          "cells": ["TOTALS", "2267", "282", "~19.5 min", "Documentary content (IP + VO + buffer)"]
+        },
+        {
+          "kind": "calculation",
+          "cells": ["Credits", "", "", "2.0 min", ""]
+        },
+        {
+          "kind": "totals",
+          "cells": ["TOTAL PROGRAM", "", "", "~21.5 min", ""]
+        },
+        {
+          "kind": "assessment",
+          "cells": ["ASSESSMENT", "", "", "", "The cut runs approximately 3.5 minutes under the 23-minute content target. This is intentional and reflects the selection standards: a tight 19.5-minute story is better than a padded 23-minute one."]
+        },
+        {
+          "kind": "trim",
+          "cells": ["EXTENSION PRIORITY 1", "", "", "+~45 sec", "Add the first failed escape attempt (00:28:18–00:28:56) — the family lost all their possessions when the first crossing was aborted. Deepens the stakes of the desert section."]
+        },
+        {
+          "kind": "trim",
+          "cells": ["EXTENSION PRIORITY 2", "", "", "+~50 sec", "Add the popcorn reading / ESL story (00:17:02–00:17:44) — Nilu in third grade, called on to read, couldn't read English, told a story based on the pictures. \"What page is she on?\" Graduated ESL in one to two weeks. Charming, reveals character."]
+        },
+        {
+          "kind": "trim",
+          "cells": ["EXTENSION PRIORITY 3", "", "", "+~50 sec", "Add the Oakland hotel anecdote (00:45:07–00:46:11) — booking a $60/night dodgy hotel for a consulting trip to Kaiser because of her scarcity mindset from non-profit work. Mentor finds out and makes her move. Illustrates the non-profit-to-for-profit transition with specificity and humor."]
+        },
+        {
+          "kind": "trim",
+          "cells": ["EXTENSION PRIORITY 4", "", "", "+~15 sec", "Expand the meditation dinner parties (00:49:41–00:50:03) — \"we would lure people in with free food and then teach them how to meditate.\" Good laugh line."]
+        },
+        {
+          "kind": "trim",
+          "cells": ["EXTENSION PRIORITY 5", "", "", "+~50 sec", "Add the Beguines story (01:48:15–01:49:04) — women in 12th-century Europe who created their own communities outside of the available options (nun, wife, sex worker). Audience response: \"let's do that now.\" Shows Wonder's impact in action."]
+        },
+        {
+          "kind": "assessment",
+          "cells": ["EXTENSION TOTAL", "", "", "+~3.5 min", "These five additions would bring the content to approximately 22.5–23 minutes."]
+        }
+      ]
+    },
+    {
+      "id": "decisions",
+      "excel_name": "Decisions",
+      "banner_title": "STORY STRUCTURE & EDITORIAL DECISIONS",
+      "banner_subtitle": "Appendices B & C",
+      "headers": ["DECISION", "TYPE", "RATIONALE", "IMPACT"],
+      "rows": [
+        {
+          "kind": "data",
+          "cells": ["Structure follows the seed metaphor: planting, dormancy, bloom", "Structure", "Nilu uses this metaphor herself — \"that seed was planted... and then it just wasn't watered for a long time\" (00:23:40). The entire structure is organized around planting, dormancy, and bloom.", "Provides a single through-line that the subject herself articulates, making the structure feel organic rather than imposed."]
+        },
+        {
+          "kind": "data",
+          "cells": ["HOOK opens with mission statement rather than trauma", "Structure", "The mystery of what this assignment is and how she got it pulls a cold viewer in. The self-introduction immediately grounds who she is.", "Avoids trauma-first framing; positions this as a creator's story rather than a refugee story."]
+        },
+        {
+          "kind": "data",
+          "cells": ["THROUGH THE DESERT placed second rather than as hook", "Structure", "The escape story needs context to land. The tarp-over-the-truck moment, the mother praying, and the uncle's execution are the emotional foundations — but they need the viewer to already care about Nilu.", "Emotional payoff is stronger because the viewer has already met the adult Nilu."]
+        },
+        {
+          "kind": "data",
+          "cells": ["THE MIXER is the release valve after the desert", "Structure", "The radio station story (accidentally going on air during a plane crash segment while playing James Brown) is the documentary's biggest laugh and the clearest seed-planting metaphor. It also covers the 20-year career detour efficiently.", "Tonal relief after heavy material; efficient compression of career years."]
+        },
+        {
+          "kind": "data",
+          "cells": ["THE DANGEROUS PRAYER positioned as the section with the most room", "Structure", "Contains the highest-stakes material: the faith journey, the Salinas gas station encounter, and the 3 AM conversation with God. The \"have I ever failed you before?\" moment is the emotional hinge of the entire documentary.", "Allows the spiritual journey to breathe without rushing the most emotionally complex material."]
+        },
+        {
+          "kind": "data",
+          "cells": ["WONDER delivers the payoff", "Structure", "The Layla video — an Iranian woman doing runway shows in her living room under the same regime Nilu fled — is the catalyst. The cracked iPhone and Boise apartment are the visual contrast to everything before. The man who called his father proves the seed metaphor has come full circle.", "Narrative payoff feels earned because every prior section has built toward this moment."]
+        },
+        {
+          "kind": "data",
+          "cells": ["THE SEED closes the loop", "Structure", "Nilu's vulnerability about being 44, unmarried, and childless reframes legacy as impact rather than lineage. The \"I don't need permission\" line echoes the themes of hiding/not hiding throughout.", "Emotional climax followed by a punchy declarative beat gives the viewer both catharsis and a takeaway."]
+        },
+        {
+          "kind": "data",
+          "cells": ["Spiritual journey woven through Sections 2, 4, and 5 — not given its own section", "Structure", "Faith rises as a current: persecution → rejection of organized religion → 20 years seeking → Jesus → full surrender → Wonder. A separate section would make the documentary feel like a conversion testimony rather than a story about an artist finding her voice.", "Avoids alienating secular viewers while honoring the centrality of faith to Nilu's story."]
+        },
+        {
+          "kind": "data",
+          "cells": ["Rejected: Open with the escape (truck/tarp/desert)", "Alt Structure", "Front-loads trauma and positions this as a refugee story rather than a creator's story. The escape is more powerful as a revelation after we've met the adult Nilu.", "Would have changed the genre perception of the documentary."]
+        },
+        {
+          "kind": "data",
+          "cells": ["Rejected: Open with the gas station encounter", "Alt Structure", "The Michael/Salinas moment is cinematic and has a cold-open quality. But it requires too much spiritual context that a cold viewer doesn't have yet. Plays better as a mid-documentary escalation.", "Would have confused cold viewers and required exposition that undermines the dramatic reveal."]
+        },
+        {
+          "kind": "data",
+          "cells": ["Rejected: Separate section for Woman Life Freedom / viral moment", "Alt Structure", "The protest and the 4-million-view video could anchor their own chapter. Rejected for runtime; the protest is better as a beat within the spiritual section, and the rage IP captures the emotional core without the full backstory.", "Saves ~2 minutes of runtime while preserving the emotional core."]
+        },
+        {
+          "kind": "data",
+          "cells": ["Rejected: Separate section for the Zucker house", "Alt Structure", "David Zucker's house is a fascinating creative environment but ultimately a setting, not a story beat. The key takeaway — \"it showed me what not hiding looked like\" — is captured in a single IP.", "Prevents the documentary from becoming a celebrity anecdote detour."]
+        },
+        {
+          "kind": "data",
+          "cells": ["Rejected: Chronological order", "Alt Structure", "The middle years (healthcare, consulting) are informational rather than emotional. The narrative arc requires compression and reordering.", "Chronological order would have created a saggy middle with low emotional yield."]
+        }
+      ]
+    }
+  ]
+}
+```

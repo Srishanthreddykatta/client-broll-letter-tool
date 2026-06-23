@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISTV — Production Briefs Generated</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Inside Success TV" class="logo">
+            <h1 class="tool-title">B-Roll Generation Tool</h1>
+        </header>
+
+        <div class="result-header">
+            <div class="result-meta">
+                <h2>{{ client_full_name }}</h2>
+                <p class="episode-tag">{{ episode_title }}</p>
+            </div>
+            <div class="result-actions">
+                <a href="{{ url_for('index') }}" class="btn-action btn-new">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18">
+                        <path d="M12 5v14M5 12h14"/>
+                    </svg>
+                    New Brief
+                </a>
+            </div>
+        </div>
+
+        <!-- Tab Navigation -->
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="client" id="tabClient">
+                <span class="tab-step">Step 1</span>
+                Client Brief
+            </button>
+            {% if editor_brief_id %}
+            <button class="tab-btn" data-tab="editor" id="tabEditor">
+                <span class="tab-step">Step 2</span>
+                Editor Decision Sheet
+            </button>
+            {% endif %}
+        </div>
+
+        <!-- Tab 1: Client Brief -->
+        <div class="tab-content active" id="panelClient">
+            <div class="type-badge type-badge-client">Client Production Brief</div>
+
+            <div class="tab-actions">
+                <button class="btn-action btn-copy" id="copyClientBtn" title="Copy formatted HTML for Google Docs">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                        <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
+                    </svg>
+                    Copy for Google Docs
+                </button>
+                <a href="{{ url_for('download_docx', brief_id=client_brief_id) }}" class="btn-action btn-docx">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18">
+                        <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                        <path d="M14 2v6h6M8 13h8M8 17h8M8 9h2"/>
+                    </svg>
+                    Download DOCX
+                </a>
+                <a href="{{ url_for('download_html', brief_id=client_brief_id) }}" class="btn-action btn-html">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18">
+                        <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                        <path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/>
+                    </svg>
+                    Download HTML
+                </a>
+                <a href="{{ url_for('download_pdf', brief_id=client_brief_id) }}" class="btn-action btn-pdf">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18">
+                        <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                    </svg>
+                    Download PDF
+                </a>
+            </div>
+            <p class="copy-hint">Tip: Use <strong>Copy for Google Docs</strong>, or open the downloaded HTML file, select all (Ctrl+A), and paste into a new Google Doc.</p>
+
+            <div class="section-toggle-bar">
+                <button class="btn-toggle" id="expandAllBtn" title="Expand all sections">Expand All</button>
+                <button class="btn-toggle" id="collapseAllBtn" title="Collapse all sections">Collapse All</button>
+            </div>
+
+            <div class="brief-output brief-export-doc" id="clientOutput">
+                {{ client_brief_html | safe }}
+            </div>
+
+            {% if not editor_brief_id %}
+            <div class="editor-generate-section" style="margin-top: 24px; padding: 20px; background: #f8f7f4; border-radius: 10px; border: 1px solid #e5e2d9; text-align: center;">
+                <p style="margin: 0 0 12px 0; color: #555; font-size: 14px;">Client brief is ready. Continue to generate the Editor Decision Sheet?</p>
+                <a href="{{ url_for('generate_editor', client_brief_id=client_brief_id) }}"
+                   class="btn-generate"
+                   id="editorGenBtn"
+                   style="display: inline-flex; align-items: center; gap: 8px; text-decoration: none; font-size: 14px; padding: 12px 28px;"
+                   onclick="this.innerHTML='<span class=\'spinner\' style=\'width:16px;height:16px;border-width:2px;\'></span> Generating Editor Sheet...'; this.style.pointerEvents='none'; this.style.opacity='0.7';">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                    Generate Editor Decision Sheet
+                </a>
+            </div>
+            {% endif %}
+        </div>
+
+        {% if editor_brief_id %}
+        <!-- Tab 2: Editor Decision Sheet -->
+        <div class="tab-content" id="panelEditor">
+            <div class="type-badge type-badge-editor">Editor Decision Sheet — Internal Use Only</div>
+
+            <div class="tab-actions">
+                <a href="{{ url_for('download_html', brief_id=editor_brief_id) }}" class="btn-action btn-html">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18">
+                        <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                        <path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/>
+                    </svg>
+                    Download HTML
+                </a>
+                <button class="btn-action btn-copy" id="copyEditorBtn" title="Copy formatted HTML for Google Docs">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                        <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
+                    </svg>
+                    Copy for Google Docs
+                </button>
+                <a href="{{ url_for('download_pdf', brief_id=editor_brief_id) }}" class="btn-action btn-pdf">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18">
+                        <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                    </svg>
+                    Download PDF
+                </a>
+            </div>
+
+            <div class="brief-output brief-output-editor" id="editorOutput">
+                {{ editor_sheet_html | safe }}
+            </div>
+        </div>
+        {% endif %}
+
+        <div class="copy-toast" id="copyToast">Copied to clipboard</div>
+    </div>
+
+    <script>
+        {% if editor_brief_id %}
+        const tabClient = document.getElementById('tabClient');
+        const tabEditor = document.getElementById('tabEditor');
+        const panelClient = document.getElementById('panelClient');
+        const panelEditor = document.getElementById('panelEditor');
+
+        function switchTab(tab) {
+            if (tab === 'client') {
+                tabClient.classList.add('active');
+                tabEditor.classList.remove('active');
+                panelClient.classList.add('active');
+                panelEditor.classList.remove('active');
+            } else {
+                tabEditor.classList.add('active');
+                tabClient.classList.remove('active');
+                panelEditor.classList.add('active');
+                panelClient.classList.remove('active');
+            }
+        }
+
+        tabClient.addEventListener('click', () => switchTab('client'));
+        tabEditor.addEventListener('click', () => switchTab('editor'));
+        {% endif %}
+
+        function copyContent(elementId) {
+            const output = document.getElementById(elementId);
+            const range = document.createRange();
+            range.selectNodeContents(output);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+
+            const title = {{ client_full_name | tojson }} + ' — Post-Edit B-Roll Brief';
+            const styleBlock = '<style>' +
+                'h2[style*="page-break-before"] { page-break-before: always; }' +
+                '.major-section-start { page-break-before: always; }' +
+                '</style>';
+            const htmlContent = (
+                '<!DOCTYPE html><html><head><meta charset="UTF-8">' + styleBlock + '</head><body>' +
+                '<h1 style="color:#8a7234;font-family:Arial,sans-serif;">' + title + '</h1>' +
+                output.innerHTML +
+                '</body></html>'
+            );
+            const textContent = output.innerText;
+
+            const clipboardItem = new ClipboardItem({
+                'text/html': new Blob([htmlContent], { type: 'text/html' }),
+                'text/plain': new Blob([textContent], { type: 'text/plain' })
+            });
+
+            navigator.clipboard.write([clipboardItem]).then(() => {
+                showToast();
+                selection.removeAllRanges();
+            }).catch(() => {
+                document.execCommand('copy');
+                showToast();
+            });
+        }
+
+        function showToast() {
+            const toast = document.getElementById('copyToast');
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 2000);
+        }
+
+        document.getElementById('copyClientBtn').addEventListener('click', () => copyContent('clientOutput'));
+        {% if editor_brief_id %}
+        document.getElementById('copyEditorBtn').addEventListener('click', () => copyContent('editorOutput'));
+        {% endif %}
+
+        // Expand / Collapse all sections
+        const expandBtn = document.getElementById('expandAllBtn');
+        const collapseBtn = document.getElementById('collapseAllBtn');
+        if (expandBtn && collapseBtn) {
+            expandBtn.addEventListener('click', () => {
+                document.querySelectorAll('#clientOutput details.brief-section').forEach(d => d.open = true);
+            });
+            collapseBtn.addEventListener('click', () => {
+                document.querySelectorAll('#clientOutput details.brief-section').forEach(d => d.open = false);
+            });
+        }
+    </script>
+</body>
+</html>

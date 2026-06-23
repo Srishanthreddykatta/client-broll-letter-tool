@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ client_full_name }} - Post-Edit B-Roll Brief</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 10.5pt;
+            line-height: 1.5;
+            color: #1a1a1a;
+            max-width: 8in;
+            margin: 0 auto;
+            padding: 24px 32px 48px;
+            background: #ffffff;
+        }
+        .export-header {
+            text-align: center;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 2.5px solid #c8a84e;
+        }
+        .export-header img {
+            width: 180px;
+            margin-bottom: 10px;
+        }
+        .export-header h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14pt;
+            color: #8a7234;
+            margin: 0 0 6px;
+            letter-spacing: 0.3px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .export-header .subtitle {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 11pt;
+            color: #333;
+            margin: 0;
+            font-weight: 600;
+        }
+        .export-header .date {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 8.5pt;
+            color: #888;
+            margin-top: 8px;
+        }
+        .brief-content {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 10.5pt;
+            color: #1a1a1a;
+        }
+        .brief-content h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 13pt;
+            color: #c8a84e;
+            font-weight: bold;
+            margin: 28px 0 6px;
+        }
+        .brief-content h2 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 11pt;
+            color: #8a7234;
+            font-weight: bold;
+            margin: 22px 0 8px;
+        }
+        .brief-content h3 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 10pt;
+            color: #1a1a1a;
+            font-weight: bold;
+            margin: 14px 0 6px;
+        }
+        .brief-content p {
+            margin: 0 0 8px;
+        }
+        .brief-content em {
+            color: #555;
+            font-style: italic;
+        }
+        .brief-content strong {
+            font-weight: bold;
+        }
+        .brief-content ul, .brief-content ol {
+            margin: 0 0 12px 22px;
+        }
+        .brief-content li {
+            margin-bottom: 6px;
+        }
+        .brief-content hr {
+            border: none;
+            border-top: 1px solid #e0ddd5;
+            margin: 18px 0;
+        }
+        .brief-content table.brief-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 12px 0;
+        }
+        .brief-content h2.major-section-start {
+            page-break-before: always;
+            margin-top: 28px;
+        }
+    </style>
+</head>
+<body>
+    <div class="export-header">
+        {% if brief_type == 'editor' %}
+        <h1>EDITOR B-ROLL DECISION SHEET</h1>
+        <p class="subtitle" style="color:#8a7234;font-weight:bold;">Internal Use Only</p>
+        {% else %}
+        <h1>Post-Edit B-Roll and Production Brief</h1>
+        {% endif %}
+        <p class="subtitle">{{ client_full_name }} - {{ episode_title }}</p>
+        <p class="date">Generated {{ generation_date }}</p>
+    </div>
+    <div class="brief-content">
+        {{ brief_html | safe }}
+    </div>
+</body>
+</html>
