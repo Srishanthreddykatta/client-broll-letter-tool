@@ -30,7 +30,7 @@ try:
 except ImportError:
     GEMINI_AVAILABLE = False
 
-CLAUDE_MODEL = "claude-opus-4-20250514"
+CLAUDE_MODEL = os.environ.get("CLAUDE_MODEL", "claude-sonnet-4-6")
 CLAUDE_MAX_TOKENS = 16384
 CLAUDE_MAX_RETRIES = 3
 CLAUDE_TIMEOUT_SECONDS = 600.0
@@ -60,8 +60,10 @@ AUDIO_EXTENSIONS = {"mp3", "wav", "m4a", "ogg", "flac", "mp4", "webm"}
 AUDIO_MAX_SIZE_BYTES = 50 * 1024 * 1024  # 50 MB threshold for compression
 
 
-def save_to_generated_folder(client_full_name, episode_title, brief_md, transcript_text=None):
-    """Save all outputs to generated/<ClientName>_<EpisodeTitle>_<date>/ folder."""
+def save_to_generated_folder(
+    client_full_name, episode_title, brief_md, transcript_text=None, brief_html=None
+):
+    """Save md/html/docx to generated/<ClientName>_<EpisodeTitle>_<date>/ folder."""
     safe_name = re.sub(r'[^\w\s-]', '', client_full_name or 'Client').strip()
     safe_name = re.sub(r'\s+', '_', safe_name) or 'Client'
     safe_ep = re.sub(r'[^\w\s-]', '', episode_title or 'Episode').strip()
@@ -75,6 +77,16 @@ def save_to_generated_folder(client_full_name, episode_title, brief_md, transcri
     brief_path = os.path.join(folder_path, f"{safe_name}_BRoll_Brief.md")
     with open(brief_path, "w", encoding="utf-8") as f:
         f.write(brief_md)
+
+    if brief_html:
+        html_path = os.path.join(folder_path, f"{safe_name}_BRoll_Brief.html")
+        with open(html_path, "w", encoding="utf-8") as f:
+            f.write(brief_html)
+        from brief_document import export_production_brief_docx
+
+        docx_path = os.path.join(folder_path, f"{safe_name}_BRoll_Brief.docx")
+        if not export_production_brief_docx(html_path, docx_path, brief_path):
+            print(f"Warning: DOCX export failed for {folder_path}")
 
     if transcript_text:
         transcript_path = os.path.join(folder_path, f"{safe_name}_Transcript.txt")
@@ -1480,7 +1492,9 @@ def generate():
         images=client_images, extra_meta=editor_meta,
     )
 
-    save_to_generated_folder(display_name, display_title, client_brief_md, transcript_text)
+    save_to_generated_folder(
+        display_name, display_title, client_brief_md, transcript_text, client_brief_html
+    )
 
     return render_template(
         "result.html",
@@ -1782,7 +1796,9 @@ def batch_generate():
                 name_base, episode_title,
                 brief_type="client", images=client_images,
             )
-            save_to_generated_folder(name_base, episode_title, clean_md)
+            save_to_generated_folder(
+                name_base, episode_title, clean_md, brief_html=brief_html
+            )
 
             return {
                 "filename": filename,

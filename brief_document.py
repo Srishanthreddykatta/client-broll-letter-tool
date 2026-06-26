@@ -413,16 +413,84 @@ def _remove_duplicate_submit_section(brief_md: str) -> str:
     )
 
 
-def _strip_existing_front_matter(brief_md: str) -> str:
-    """Remove prior instructions/folder/submit block so we can inject the current template."""
+_AI_PAGE_ONE_BOILERPLATE_RES: list[tuple[str, int]] = [
+    (r"^#\s*INSIDE SUCCESS TV\s*\n", 0),
+    (r"^#{1,4}\s*Post-Edit B-Roll[^\n]*\n", 0),
+    (r"^#{1,4}\s*POST-EDIT B-ROLL[^\n]*\n", 0),
+    (r"^#{1,4}\s*[^#\n]*Inside Success[^\n]*\n", 0),
+    (r"^\*Page \d+ of \d+[^\n]*\*\s*\n", 0),
+    (r"^##\s*FOLDER STRUCTURE\b.*?(?=^##\s*HOW TO SUBMIT|^#\s|\Z)", re.DOTALL),
+    (r"^##\s*HOW TO SUBMIT\b.*?(?=^#\s*QUICK|^##\s*SECTION|^#\s*DETAILED|\Z)", re.DOTALL),
+]
+
+_INSTRUCTION_TABLE_BLOCK_RE = re.compile(
+    r"(?:^|\n)(?:---\s*\n)?"
+    r"\| \*\*MUST READ\*\* \|\s*\n"
+    r"\|---\|\s*\n"
+    r"(?:\|[^\n]+\|\s*\n)+"
+    r"(?:\n(?:---\s*\n)?"
+    r"\| \*\*(?:Your upload folder tree|HOW TO SUBMIT)\*\* \|\s*\n"
+    r"\|---\|\s*\n"
+    r"(?:\|[^\n]+\|\s*\n)+"
+    r"){0,2}",
+    re.MULTILINE | re.IGNORECASE,
+)
+
+
+_ORPHAN_FOLDER_TREE_RE = re.compile(
+    r"(?:^|\n)(?:---\s*\n)?"
+    r"\| \*\*Your upload folder tree\*\* \|\s*\n"
+    r"\|---\|\s*\n"
+    r"(?:\|[^\n]+\|\s*\n)+",
+    re.MULTILINE | re.IGNORECASE,
+)
+
+_ORPHAN_SUBMIT_RE = re.compile(
+    r"(?:^|\n)(?:---\s*\n)?"
+    r"\| \*\*(?:How to submit|HOW TO SUBMIT)\*\* \|\s*\n"
+    r"\|---\|\s*\n"
+    r"(?:\|[^\n]+\|\s*\n)+",
+    re.MULTILINE | re.IGNORECASE,
+)
+
+
+def _strip_ai_page_one_boilerplate(brief_md: str) -> str:
+    """Remove Claude-generated title blocks and page footers that duplicate the HTML header."""
     text = brief_md or ""
+    for pattern, extra_flags in _AI_PAGE_ONE_BOILERPLATE_RES:
+        text = re.sub(pattern, "", text, flags=re.MULTILINE | re.IGNORECASE | extra_flags)
+    while True:
+        m = re.match(
+            r"^(?:---\s*\n|"
+            r"#+\s+(?!MUST READ|QUICK CHECKLIST|SECTION|DETAILED)[^\n]+\n|"
+            r"\*Page \d+[^\n]*\*\s*\n)+",
+            text,
+            flags=re.IGNORECASE,
+        )
+        if not m:
+            break
+        text = text[m.end() :]
+    return text
+
+
+def _strip_all_instruction_table_blocks(brief_md: str) -> str:
+    """Remove every MUST READ / folder-tree / submit table group (injected fresh afterward)."""
+    text = _INSTRUCTION_TABLE_BLOCK_RE.sub("\n", brief_md or "")
+    text = _ORPHAN_FOLDER_TREE_RE.sub("\n", text)
+    text = _ORPHAN_SUBMIT_RE.sub("\n", text)
     text = re.sub(
-        r"^#\s*(?:MUST READ\s*[—–-]\s*)?INSTRUCTIONS FOR THE CLIENT\b.*?(?=^#\s*QUICK\s+CHECKLIST)",
+        r"^#\s*(?:MUST READ\s*[—–-]\s*)?INSTRUCTIONS FOR THE CLIENT\s*\n*",
         "",
         text,
-        count=1,
-        flags=re.MULTILINE | re.DOTALL | re.IGNORECASE,
+        flags=re.MULTILINE | re.IGNORECASE,
     )
+    return text
+
+
+def _strip_existing_front_matter(brief_md: str) -> str:
+    """Remove prior instructions/folder/submit block so we can inject the current template."""
+    text = _strip_ai_page_one_boilerplate(brief_md or "")
+    text = _strip_all_instruction_table_blocks(text)
     return text.lstrip()
 
 
@@ -438,14 +506,13 @@ def _ensure_client_front_matter(brief_md: str, client_full_name: str) -> str:
         count=1,
         flags=re.MULTILINE | re.IGNORECASE,
     )
-    if re.search(r"^#\s*QUICK\s+CHECKLIST", text, re.MULTILINE | re.IGNORECASE):
-        return re.sub(
-            r"^(#\s*QUICK\s+CHECKLIST)",
-            front + r"\1",
-            text,
-            count=1,
-            flags=re.MULTILINE | re.IGNORECASE,
-        )
+    text = re.sub(r"^(?:---\s*\n)+", "", text)
+    quick = re.search(r"^#\s*QUICK\s+CHECKLIST\b", text, re.MULTILINE | re.IGNORECASE)
+    if quick:
+        return text[: quick.start()] + front + text[quick.start() :]
+    section_a = re.search(r"^##\s*SECTION\s+A\b", text, re.MULTILINE | re.IGNORECASE)
+    if section_a:
+        return text[: section_a.start()] + front + "# QUICK CHECKLIST\n\n" + text[section_a.start() :]
     return front + text
 
 
@@ -1318,6 +1385,30 @@ def md_to_brief_fragment(brief_md: str) -> str:
 
 def _polish_brief_html(html: str) -> str:
     """Tighter spacing, closing block styling, fewer redundant rules."""
+    html = re.sub(
+        r"<h1>\s*MUST READ\s*[—–-]\s*INSTRUCTIONS FOR THE CLIENT\s*</h1>\s*",
+        "",
+        html,
+        flags=re.IGNORECASE,
+    )
+    html = re.sub(
+        r"<h[1-4]>\s*Post-Edit B-Roll[^<]*</h[1-4]>\s*",
+        "",
+        html,
+        flags=re.IGNORECASE,
+    )
+    html = re.sub(
+        r"<h[1-4]>\s*[^<]*Inside Success[^<]*</h[1-4]>\s*",
+        "",
+        html,
+        flags=re.IGNORECASE,
+    )
+    html = re.sub(
+        r"<p>\s*<em>\s*Page \d+ of \d+[^<]*</em>\s*</p>\s*",
+        "",
+        html,
+        flags=re.IGNORECASE,
+    )
     html = re.sub(r"(<hr\s*/>\s*){2,}", "<hr />", html, flags=re.IGNORECASE)
     html = re.sub(r"</table>\s*<hr\s*/>\s*(?=<h2)", "</table>\n", html, flags=re.IGNORECASE)
     html = re.sub(r"<hr\s*/>\s*(?=<h2)", "", html, flags=re.IGNORECASE)

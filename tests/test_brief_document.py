@@ -286,11 +286,83 @@ class TestPageBreakPlan:
     def test_client_front_matter_injected_in_html(self):
         md = "# QUICK CHECKLIST\n\n## SECTION A — PHOTOS\n"
         html = build_client_brief_html(md, "Test Client", "Test Episode")
-        assert "INSTRUCTIONS FOR THE CLIENT" in html
+        assert "MUST READ" in html
+        assert "<h1>MUST READ" not in html
         assert "Section C — New Video Footage" in html
         assert "Section E — Extras" in html
         assert "How to submit" in html
         assert "doc-logo" in html
+
+    def test_strips_duplicate_ai_page_one_blocks(self):
+        md = """# POST-EDIT B-ROLL & PRODUCTION BRIEF
+### Inside Success TV · Mark Chavez · Episode
+
+---
+
+*Page 1 of 2 — Instructions, Folder Structure & Quick Checklist*
+
+---
+
+| **MUST READ** |
+|---|
+| Work through the checklist below (Sections A–D). |
+| **Section E — Extras:** one folder for substitutes. |
+
+| **Your upload folder tree** |
+|---|
+| Mark_Chavez_Broll / |
+| &nbsp;&nbsp;&nbsp;&nbsp;A_Photos / |
+
+| **How to submit** |
+|---|
+| Create the folders above inside your upload |
+
+---
+
+## SECTION A — PHOTOS & ARCHIVAL (2 items)
+
+| **Photo** | **A little more detail** | **Good to have** | **Alternative option** |
+|---|---|---|---|
+| Childhood photo | Early years | | |
+"""
+        clean, html = build_production_brief(md, "Marc Chavez", "The Grind Beyond the Verdict")
+        assert clean.count("| **MUST READ** |") == 1
+        assert clean.count("| **Your upload folder tree** |") == 1
+        assert "Page 1 of 2" not in clean
+        assert "POST-EDIT B-ROLL" not in clean
+        assert "Mark_Chavez_Broll" not in clean
+        assert "Marc Chavez — B-Roll Upload" in clean
+        assert "<h1>MUST READ" not in html
+        assert html.count(">MUST READ<") == 1 or html.count("MUST READ</strong>") >= 1
+
+    def test_strips_orphan_ai_tables_before_injection(self):
+        md = """### Kimberly Bebo · Woman in Power · Episode: Pay Your Friends First
+
+---
+
+| **Your upload folder tree** |
+|---|
+| Kimberly_Bebo_Broll/ |
+| &nbsp;&nbsp;&nbsp;&nbsp;A_Photos/ |
+
+---
+
+| **How to submit** |
+|---|
+| Create the folders above inside your upload |
+
+---
+
+## SECTION A — PHOTOS & ARCHIVAL (1 items)
+
+| **Photo** | **A little more detail** | **Good to have** | **Alternative option** |
+|---|---|---|---|
+| Childhood photo | Early years | | |
+"""
+        clean, _html = build_production_brief(md, "Kimberly Beinborn", "Pay Your Friends First")
+        assert "Kimberly_Bebo_Broll" not in clean
+        assert clean.count("| **Your upload folder tree** |") == 1
+        assert "Kimberly Beinborn — B-Roll Upload" in clean
 
     def test_generalize_specific_ages(self):
         text = "You around age 6 and at age 31 in the photo"
